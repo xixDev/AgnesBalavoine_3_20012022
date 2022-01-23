@@ -1,0 +1,21 @@
+/**************
+Navigation
+20/01/2022
+**************/
+
+.nav {
+    /* display: flex;
+    flex-direction: column;
+    align-content: center;  */
+    background-color: #fff;
+    padding-bottom:40px;
+  }
+
+  
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none; /* removes bullets */ 
+    padding:20px;
+}
