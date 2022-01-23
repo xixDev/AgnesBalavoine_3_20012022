@@ -1,0 +1,40 @@
+/**************
+Mixins
+20/01/2022
+**************/
+//Mixins
+// $font-site(font_name,font_style) :font-family: 'Shrikhand', cursive;
+// $font-title :font-family: 'Shrikhand', cursive;
+// $font-size: 7rem 5rem 4rem 2rem;
+
+@mixin border($colour:$colour-primary) {
+    border: .1rem solid $colour;
+}
+
+
+i.fa-list-ul, i.fa-mobile-alt, i.fa-store { 
+    font-size:20px;
+    width:24px;
+    margin:8px;
+    color:#777;
+    /* background-color: #fff; */
+  }
+  
+  i.fas a:hover{ 
+  font-size:20px;
+  width:24px;
+  margin:8px;
+  color:#9356DC;
+  }
+  
+  
+  i.fa-mobile-alt{
+  font-size:22px;
+  }
+  
+  /* icon style*/
+  i.fa-map-marker-alt { 
+  padding:12px; 
+  color:#000;
+  width:25px;
+  }

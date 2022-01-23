@@ -1,0 +1,63 @@
+/**************
+BoxThumbs
+20/01/2022
+**************/
+
+ /*****************
+  container
+  ******************/
+  .item{
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    background-color: #fff;
+  }
+
+  figure.item{
+    width:336px;
+    margin:10px;
+  }
+  
+  figure.item img {
+    width: 336px;
+    height: 174px;
+    object-fit: cover;
+    border-radius: 14px 14px 0px 0px;
+    z-index:7;
+  }
+
+  figure.item  .new {
+    background-color: #99E2D0;
+    position:absolute;
+    margin:10px 0 0 250px;
+    padding:8px;
+    font-size:13px;
+    color:#308b75;
+    z-index:5;
+  }
+
+  .item figcaption  {
+    margin:14px 20px 14px 14px;
+    /* display:inline-flex; */
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;  
+    justify-content: space-between; 
+  } 
+  
+  .item .love{
+    font-size:22px;
+    align-self:center;  
+    margin-top:0px; 
+  }
+
+  .item .love:hover{ 
+    background-color: rgb(194, 136, 60); 
+  }
+
+  .item figcaption h3  {
+    /* font-size: 12px; */
+    line-height: 2.0; 
+    margin:0px ; 
+    flex: 1 100%; 
+  }
