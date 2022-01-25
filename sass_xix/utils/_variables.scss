@@ -1,27 +1,52 @@
 /**************
 Variable
 20/01/2022
-**************/
-
-/***************
-colors 
 Ohmyfood !
 Primaire #9356DC
 Secondaire  #FF79DA 
 Tertiaire #99E2D0 
-***************/
+**************/
 
 $colour-primary: #9356DC;
+$colour-primary-light:#f5edff;
 $colour-secondary: #FF79DA;
 $color-tertiary :#99E2D0;
-$color-background :#eee;
+$color-background :#ddd;
 
-$colour-grey: #F2F2F2;
-$colour-white: #fff;
-$colour-invalid: #DB464B;
+/* fonction degrade black ?*/
+$white: #fff;
+$greylight: #F2F2F2;
+$greylight02:#f6f6f6;
+$greylight03:#eaeaea;
+$grey: #777;
+$greym:#656565;
+$greydark: #333;
+$black: #000;
 
+$gradient:linear-gradient(#FF79DA,#9356DC);
 
+/**/
+$padding-dimensions: 1rem 2rem 3rem 4rem;
+$center-margin: 0px auto;
 
+/**/
 $heading-shadow-size: .55rem;
 $layout-margin: 6rem;
-$grid-gutter: $layout-margin * .25;
+
+$shadowbox: 0 3px 3px rgba(0, 0, 0, 0.1);
+
+
+$shadow-1: rgba(#000,.5) -200px 0 0;
+$shadow-2: rgba(#000,.4) -400px 0 0;
+$shadow-3: rgba(#000,.3) -600px 0 0;
+$shadow-4: rgba(#000,.2) -800px 0 0;
+
+/**/
+// $font-site(font_name,font_style) :font-family: 'Shrikhand', cursive;
+// $font-title :font-family : 'Shrikhand', cursive;
+// $font-size: 7rem 5rem 4rem 2rem;
+$font-size: 14px 16px 18px 22px;
+
+
+
+

@@ -3,12 +3,64 @@ Mixins
 20/01/2022
 **************/
 //Mixins
-// $font-site(font_name,font_style) :font-family: 'Shrikhand', cursive;
-// $font-title :font-family: 'Shrikhand', cursive;
-// $font-size: 7rem 5rem 4rem 2rem;
 
-@mixin border($colour:$colour-primary) {
-    border: .1rem solid $colour;
+
+@mixin margpad {
+    margin: 0;
+    padding: 0;
 }
 
+@mixin bordershadow{
+	margin:1px;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0.8, 0.5); 
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+@mixin shadow{
+    box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
+}
+@mixin shadow02{
+box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2; 
+}
+ 
+
+/***************
+icons
+***************/
+
+i.fa-list-ul, i.fa-mobile-alt, i.fa-store { 
+    font-size:20px;
+    width:24px;
+    margin:8px;
+    color:$grey;
+    a &:hover{ 
+        width:24px;
+        margin:8px;
+        color:$colour-secondary;
+        }
+  }
+  
+  i.fa-mobile-alt{
+  font-size:22px;
+  }
+  
+/* icon style*/
+  i.fa-map-marker-alt { 
+  padding:12px; 
+  color:$greydark;
+  width:25px;
+  }
+
+
+
+
+//   i.fa-heart { 
+//     padding:4px; 
+    
+//     background:$white;
+//     }
+
+//     i.fa-heart a{ 
+//     background:$gradient;
+
+//    }  
 

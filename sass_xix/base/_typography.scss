@@ -3,3 +3,61 @@ Typography rules
 20/01/2022
 **************/
 
+
+/***************
+TYPO , LINKS
+***************/
+/* liens */
+a:link, a:visited{text-decoration: none; color:$white;} 
+a:hover { text-decoration: none; color:$colour-primary;} 
+
+p { 
+	margin: 0px;
+	padding:10px;
+	line-height: 1.2; 
+    font-size: 13px;
+    color: $grey; 
+}
+
+
+hr { 
+	border: none;
+	overflow: visible;
+    .__vert{ 
+		width:40px;
+		border-top: 3px solid $color-tertiary;
+		height: 2px;
+	}
+}
+
+
+/***************
+HGROUP
+h1,h2,h3{
+	text-align:left;
+	margin-left:9px;
+}
+***************/
+h1{
+	/* color: rgb(233, 67, 67);	 */
+	font-weight:bold;
+	font-size: 25px; 
+	text-align:center;
+	margin:0px 20px 0 20px;
+	padding:8px;
+}
+.title{ font-family: 'Shrikhand', cursive;}
+h1.title{ color:#000; font-size:32px;text-align:center;}
+h2.title{ font-size:28px;text-align:left;}
+h3.title{ color:#fff; font-size:18px;font-weight: normal;}
+
+h2{
+font-size: 17px;
+	color:#444;
+}
+
+h3{
+	font-size: 22px;
+	text-align: left;
+	margin:10px 0 12px 8px;
+	}

@@ -3,45 +3,34 @@ Home
 20/01/2022
 **************/
 
-
 /***************
 sections
 **************/
-#site {
-    opacity:1;
-    /* display: flex;
-    justify-content: center;
-    flex-direction: column; 
-    align-items: center; */
-  }
-  
-  main {
+main {
     max-width: 400px;/*400 992*/
-    margin: 0 auto;
-    /* display: flex;
-    flex-wrap: wrap;
-    align-items: center;  */
-    /*justify-content:space-evenly; */
+    margin: $center-margin;
   }
   
+.blanc{
+  background:$white; 
+  }
 
- section header, article header{
+section header, article header{
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
   padding:15px;
-  }
+} 
 
-  section{
+section{
     padding-bottom:40px;
+    align-self:center; 
   }
 
- 
-  
 .main_container {
-      max-width:635px;
-      display: flex;
-      flex-wrap: wrap; 
-      justify-content: center;
-      background-color:#F2F2F2;
-      
-    }
+  padding:20px;
+  display: flex;
+  flex-wrap: wrap; 
+  align-items:center;
+  background:$greylight;
+}

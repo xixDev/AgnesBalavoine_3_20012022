@@ -2,27 +2,44 @@
 header
 20/01/2022
 **************/
-
-header{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
+.header-nav{
+  width: 100%; 
+  text-align:center;
+  background:$white; 
+  hr{
+    @include bordershadow;
+  } 
+  h2{
+    text-align:center;
+    font-size:16px;
   }
-
+}  
 
 .info{
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content:center;
+  background: $greylight02;
+  padding-bottom:50px;
+  header{
     display: flex;
-    flex-direction: column;
-    align-items: center; 
-    /* margin-bottom:50px; */
-    background-color: #f6f6f6;
-    padding-bottom:50px;
-  
-  }
-
- .info header{
-    display: flex;
-    align-items: center; 
-    background-color: #eaeaea;
+    justify-content:center;
+    background: $greylight03;
     } 
+    h3{
+      width:80%;
+      text-align:center;
+      margin-top:30px;
+      font-size:22px;
+    }
+    p{
+      width:80%;
+      text-align:center;
+      font-size:18px;
+      color:$greym;
+    } 
+}
+
+
+

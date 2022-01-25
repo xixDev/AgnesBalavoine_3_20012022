@@ -4,3 +4,66 @@ Buttons
 **************/
 
 
+/***************
+  BTN
+  **************/
+  .btn{
+      border: none;
+      color: $white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 50px;
+      @include shadow;
+      cursor: pointer;     
+ }
+
+ .--oh {
+  // color: $white;
+  background: $gradient;  
+   &a:link{
+    color:#eee;
+    text-decoration: none;
+  }
+  &a:hover {
+    color: #9356DC;
+   }
+} 
+
+.--howto {
+    color:$greydark;
+    width:90%; 
+    text-decoration: none;
+    background: $greylight03;
+    text-align:left; 
+    margin:10px 0 10px 20px; 
+    border-radius: 25px;
+    @include shadow02;
+   .rond{
+    border-radius: 100%;
+    background-color:#9356DC;
+    font-size:14px;
+    color:#fff;
+    padding:6px 8px 6px 8px;
+    margin: 0 10px 0 -35px;
+   }
+   a:link{
+    height:100%;
+    color:$greydark;
+    text-decoration: none;
+      &:hover {
+      background-color: $colour-primary-light;
+      i.fas{
+        color:$colour-primary;
+       }
+      }
+  }
+}
+    
+      
+    
+     
+      
+  
