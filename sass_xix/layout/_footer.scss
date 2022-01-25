@@ -10,40 +10,39 @@ Footer
   footer {
     width: 100%;
     margin-top: 40px; 
-    background-color:#333;
-    color:#fff;
+    background:$greydark;
+    color:$white;
   }
   
   .footer_nav{
     display:flex;
-  }
-  
-  .footer_nav ul li {
-      font-size:15px;
-      padding:3px;   
-  }
-  
-  .footer_nav ul a {
-    color:#fff;
-    margin:10px;
-    padding:4px;
-    text-decoration:none;
-  }
-  
-  .footer_nav h3 {
-      margin-left:14px;
+    h3 {
+      // margin-left:14px;
       line-height:0.9;
-      text-decoration:none; 
-  }
+    }
+    ul a {
+      color:$white;
+      margin:10px;
+      padding:4px;
+      text-decoration:none;
+      &:hover {
+        text-decoration: underline;
+    }
+    }
+    ul li{
+      font-size:15px;
+      padding:3px; 
 
-  .footer_nav ul a:hover {
-      text-decoration: underline;
+    }
   }
-
+  
   .itemFooter{
     display:flex;
     flex-flow: column wrap;
     align-items: flex-start;
   }
+  
+  
+
   
   
