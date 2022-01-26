@@ -7,30 +7,27 @@ Home
 sections
 **************/
 main {
-    max-width: 400px;/*400 992*/
-    margin: $center-margin;
-  }
-  
-.blanc{
+  max-width: 400px;/*400 992*/
+  margin: $center-margin;
+}
+
+.--blanc{
   background:$white; 
   }
 
 section header, article header{
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  // @include flex-start;
   padding:15px;
 } 
 
 section{
-    padding-bottom:40px;
-    align-self:center; 
+   padding-bottom:40px;
+   align-self:center; 
   }
 
 .main_container {
   padding:20px;
-  display: flex;
-  flex-wrap: wrap; 
-  align-items:center;
+  @include flex-center;
+  flex-wrap:wrap;
   background:$greylight;
 }

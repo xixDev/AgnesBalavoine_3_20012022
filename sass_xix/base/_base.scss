@@ -11,8 +11,7 @@ BASE
 
 * {
 	box-sizing: border-box;
-	margin: 0;
-	padding: 0; 
+	@include margpad; 
   }
 
 html { 
@@ -21,7 +20,7 @@ html {
  }
 
 body {	
-	background: $color-background;
-	font-family: 'Roboto Mono', monospace;
-	font-family: 'Arial','Verdana',sans-serif;
+	background: $colour-background;
+	font-family: $font-site;
+	font-family: $font-web;
 }

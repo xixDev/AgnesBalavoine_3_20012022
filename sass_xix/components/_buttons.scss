@@ -24,12 +24,13 @@ Buttons
   // color: $white;
   background: $gradient;  
    &a:link{
-    color:#eee;
+    color:$greylight03;
     text-decoration: none;
   }
   &a:hover {
-    color: #9356DC;
+    color: $colour-primary
    }
+
 } 
 
 .--howto {
@@ -43,10 +44,10 @@ Buttons
     @include shadow02;
    .rond{
     border-radius: 100%;
-    background-color:#9356DC;
+    background-color:$colour-primary;
     font-size:14px;
     color:#fff;
-    padding:6px 8px 6px 8px;
+    padding:6px 9px 6px 9px;
     margin: 0 10px 0 -35px;
    }
    a:link{
@@ -62,6 +63,40 @@ Buttons
   }
 }
     
+/*BTN resto */
+.--carte {
+  font-size:15px;
+  background: $white;
+  display:flex;
+  align-items:flex-start;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  padding:14px 0 14px 16px;
+  margin-bottom:14px;
+  border-radius: 20px;
+  @include shadow02;
+  /* font-size:14px; */
+  a{
+    color:$greydark;
+    text-decoration: none;
+  }
+  h3{
+    font-size:18px;
+    margin-left:-3px;
+    line-height:0.5;
+  }
+  .--euros{
+    font-weight: bold;
+    color:#000;
+    margin-left:30px;
+  }
+  
+
+}
+
+.--carte a:hover{
+  background: $yellow;
+}
       
     
      

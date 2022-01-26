@@ -21,15 +21,16 @@ p {
 
 
 hr { 
-	border: none;
-	overflow: visible;
-    .__vert{ 
-		width:40px;
-		border-top: 3px solid $color-tertiary;
-		height: 2px;
-	}
+border: none;
+overflow: visible;   
 }
 
+.--vert{ 
+	width:40px;
+	border-bottom: 3px solid $colour-tertiary;
+	margin-top:8px;
+	padding-bottom:8px;
+}
 
 /***************
 HGROUP
@@ -46,7 +47,7 @@ h1{
 	margin:0px 20px 0 20px;
 	padding:8px;
 }
-.title{ font-family: 'Shrikhand', cursive;}
+.title{ font-family:$font-logo;}
 h1.title{ color:#000; font-size:32px;text-align:center;}
 h2.title{ font-size:28px;text-align:left;}
 h3.title{ color:#fff; font-size:18px;font-weight: normal;}

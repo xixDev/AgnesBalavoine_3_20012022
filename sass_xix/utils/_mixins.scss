@@ -4,7 +4,7 @@ Mixins
 **************/
 //Mixins
 
-
+// @include margpad;
 @mixin margpad {
     margin: 0;
     padding: 0;
@@ -21,7 +21,28 @@ Mixins
 @mixin shadow02{
 box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2; 
 }
- 
+
+//@include flex-center; 
+@mixin flex-center {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+//@include flex-start;
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;   
+  } 
+
+//@include flex-icon;
+@mixin flex-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content:space-between;  
+  } 
+  
 
 /***************
 icons

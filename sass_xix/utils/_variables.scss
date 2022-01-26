@@ -10,8 +10,8 @@ Tertiaire #99E2D0
 $colour-primary: #9356DC;
 $colour-primary-light:#f5edff;
 $colour-secondary: #FF79DA;
-$color-tertiary :#99E2D0;
-$color-background :#ddd;
+$colour-tertiary :#99E2D0;
+$colour-background :#ddd;
 
 /* fonction degrade black ?*/
 $white: #fff;
@@ -22,6 +22,8 @@ $grey: #777;
 $greym:#656565;
 $greydark: #333;
 $black: #000;
+
+$yellow:#e6fd75;
 
 $gradient:linear-gradient(#FF79DA,#9356DC);
 
@@ -41,11 +43,16 @@ $shadow-2: rgba(#000,.4) -400px 0 0;
 $shadow-3: rgba(#000,.3) -600px 0 0;
 $shadow-4: rgba(#000,.2) -800px 0 0;
 
-/**/
+/* font */
 // $font-site(font_name,font_style) :font-family: 'Shrikhand', cursive;
 // $font-title :font-family : 'Shrikhand', cursive;
 // $font-size: 7rem 5rem 4rem 2rem;
 $font-size: 14px 16px 18px 22px;
+$font-logo: 'Shrikhand', cursive;
+$font-site: 'Roboto Mono', monospace;
+$font-web : 'Arial','Verdana',sans-serif;
+
+
 
 
 
