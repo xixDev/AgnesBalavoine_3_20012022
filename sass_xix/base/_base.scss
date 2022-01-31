@@ -20,7 +20,8 @@ html {
  }
 
 body {	
-	background: $colour-background;
+	background: $gradient-reverse;/*$colour-background*/
 	font-family: $font-site;
+	opacity:0.98;
 	font-family: $font-web;
 }

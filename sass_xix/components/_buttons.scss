@@ -17,27 +17,28 @@ Buttons
       font-size: 16px;
       border-radius: 50px;
       @include shadow;
-      cursor: pointer;     
+      cursor: pointer; 
+      
+        
  }
 
  .--oh {
-  // color: $white;
   background: $gradient;  
-   &a:link{
+   &:link{
     color:$greylight03;
     text-decoration: none;
   }
-  &a:hover {
+  &:hover {
     color: $colour-primary
    }
 
 } 
 
 .--howto {
-    color:$greydark;
     width:90%; 
     text-decoration: none;
-    background: $greylight03;
+    background: $greylight02;
+    color:$greydark;
     text-align:left; 
     margin:10px 0 10px 20px; 
     border-radius: 25px;
@@ -50,18 +51,64 @@ Buttons
     padding:6px 9px 6px 9px;
     margin: 0 10px 0 -35px;
    }
-   a:link{
+   &:link{
     height:100%;
     color:$greydark;
-    text-decoration: none;
-      &:hover {
+    text-decoration: none;}
+
+    &:hover {
       background-color: $colour-primary-light;
       i.fas{
         color:$colour-primary;
        }
       }
-  }
+  
 }
+
+// $gradient:linear-gradient(#FF79DA,#9356DC);
+// $gradient-reverse:linear-gradient(#9356DC,#FF79DA);
+.--oh {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.19);
+ background-color: $colour-primary;
+//  text-shadow:0 1px 1px $grey;
+background-image: $gradient;
+border-color: lighten($white, 80%);
+transition: background-color 2s;
+  box-shadow: 0 1px 4px $colour-primary;
+  opacity:0.9;
+   &:link{
+    color:$greylight03;
+    text-shadow:0 1px 1px $colour-secondary;
+    background-image: linear-gradient(#FF79DA,#9356DC);
+    box-shadow: 0 4px 2px rgba(0,0,0,.5);
+    text-decoration: none;
+    // transition: background-color 200ms ease-in 50ms; 
+    transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 300ms;/* 1*/
+  }
+  &:hover {
+    color: $white;
+   background-color: lighten($colour-primary, 80%);
+    background-image: $gradient-reverse;
+    opacity:0.8;
+    
+    border-color: $white; //
+    box-shadow: 0 2px 6px $colour-secondary;
+    // transition: background-color 400ms ease-out 50ms; 
+    transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 300ms;/* 1*/
+    
+    // text
+   }
+   &:active {
+    color: $colour-tertiary;
+    border-color: $white; //
+    // background: $gradient;  
+   }
+}
+
+
+
+
+
     
 /*BTN resto */
 .--carte {
@@ -76,6 +123,8 @@ Buttons
   border-radius: 20px;
   @include shadow02;
   /* font-size:14px; */
+  transition: all 500ms ease-in-out 600ms;/* 1*/
+  animation: openSlide 0.2s ease-in-out 200ms;
   a{
     color:$greydark;
     text-decoration: none;
@@ -84,19 +133,22 @@ Buttons
     font-size:18px;
     margin-left:-3px;
     line-height:0.5;
+    
   }
   .--euros{
     font-weight: bold;
     color:#000;
     margin-left:30px;
   }
-  
+  &:hover{
+    background: $colour-tertiary;
+    transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;/* 1*/
+    
+  }
 
 }
 
-.--carte a:hover{
-  background: $yellow;
-}
+
       
     
      

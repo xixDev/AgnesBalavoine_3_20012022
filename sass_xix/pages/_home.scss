@@ -9,6 +9,7 @@ sections
 main {
   max-width: 400px;/*400 992*/
   margin: $center-margin;
+  
 }
 
 .--blanc{
@@ -18,6 +19,7 @@ main {
 section header, article header{
   // @include flex-start;
   padding:15px;
+  animation: openSlide 0.8s ease-in-out 500ms;
 } 
 
 section{

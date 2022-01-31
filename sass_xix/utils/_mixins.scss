@@ -48,6 +48,11 @@ box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
 icons
 ***************/
 
+
+i.fas fa-heart,i.far fa-heart{
+  color:$gradient;
+}
+
 i.fa-list-ul, i.fa-mobile-alt, i.fa-store { 
     font-size:20px;
     width:24px;

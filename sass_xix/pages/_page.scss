@@ -8,8 +8,16 @@ Page
   height: 260px;
   margin:0;
   padding:0; 
-  background-image:url("../images/small/restaurant_lapalettedugout_ohmyfood.jpg");
+  // background-image:url("../images/small/restaurant_lapalettedugout_ohmyfood.jpg");
   z-index: 8;
+   img{
+    opacity:0.2;
+    transition: opacity 400ms ease-in 100ms;
+    opacity:0.5;
+    object-fit: cover;
+    overflow:hidden;
+    z-index:4;
+   }
 } 
 
 .main__resto{
@@ -40,9 +48,24 @@ Page
   section {
     @include flex-center;
     margin :20px;
+    // transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 500ms;
+   
+    
   }
 }
 
+.open{
+  display:flex;
+  // opacity:0.3;
+  flex-wrap: wrap;
+  // transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 500ms;/* 1*/
+  
+
+  // animation: openSlide 0.8s ease-out;
+  .div{
+    animation: openSlide 0.8s ease-in-out 500ms;
+  }
+}
 
 
 

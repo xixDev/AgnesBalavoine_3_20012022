@@ -31,8 +31,10 @@ BoxThumbs
     }
       .love:hover{ 
         color:$white; 
-        overflow:hidden;
-        background: $gradient; 
+        // overflow:hidden;
+        // background: $gradient; 
+        fill: $gradient;
+  stroke: black;
     }
       .__new {
       background-color: #99E2D0;
@@ -40,7 +42,7 @@ BoxThumbs
       margin:10px 0 0 250px;
       padding:8px;
       font-size:13px;
-      color:#308b75;
+      color:#308b75; 
       z-index:5;
     }
       figcaption  {

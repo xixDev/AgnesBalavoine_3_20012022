@@ -5,7 +5,6 @@ MAIN
 
 /* utils */
 @import "./utils/functions";
-@import "./utils/helpers";
 @import "./utils/variables";
 @import "./utils/mixins";
 
@@ -21,29 +20,18 @@ MAIN
 /* layout */
 @import "./layout/flexbox";
 @import "./layout/footer";
-@import "./layout/forms";
-@import "./layout/grid";
 @import "./layout/header";
 @import "./layout/navigation";
-@import "./layout/sidebar";
+
 
 
 /* pages */
-@import "./pages/contact";
 @import "./pages/home";
 @import "./pages/page";
 
-/* theme */
-@import "./theme/admin";
-@import "./theme/theme";
 
 
 
-
-
-/* vendors */
-@import "./vendors/bootstrap";
-@import "./vendors/jquery";
 
 
 
