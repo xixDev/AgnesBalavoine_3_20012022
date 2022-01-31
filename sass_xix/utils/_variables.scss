@@ -11,6 +11,7 @@ $colour-primary: #9356DC;
 $colour-primary-light:#f5edff;
 $colour-secondary: #FF79DA;
 $colour-tertiary :#99E2D0;
+$colour-tertiary-dark :#308b75;
 $colour-background :#ddd;
 
 /* fonction degrade black ?*/
@@ -23,8 +24,13 @@ $greym:#656565;
 $greydark: #333;
 $black: #000;
 
-$yellow:#e6fd75;
+/**/
 
+
+$yellow:#e6fd75;
+.yellow{background-color:$yellow;}
+$pink:#fa94be75;
+.pink{background-color:$pink;}
 
 $gradient:linear-gradient(#FF79DA,#9356DC);
 $gradient-reverse:linear-gradient(#9356DC,#FF79DA);

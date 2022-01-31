@@ -4,18 +4,40 @@ header
 **************/
 .header-nav{
   width: 100%; 
-  text-align:center;
-  background:$white; 
-  hr{
-    @include bordershadow;
-  } 
+  @include flex-icon02;
+  background:$white;
+  @include bordershadow02;
+  h1{
+    animation: shakeX 800ms ease-out 250ms;
+  }
+ 
   h2{
     text-align:center;
     font-size:16px;
   }
-}  
+  .back{
+    color:$black;
+    font-size: 22px;
+    align-self:flex-start;
+    text-align:left;
+    ;
+    &:hover {
+      i.fas{
+        animation: shakeX 0.8s ease-in-out 150ms;
+        color:$colour-tertiary;
+       }
+      }
+  }
+} 
+
+.header-map{
+  opacity:0.6;
+  background:$greylight02;
+  text-align:center;
+}
 
 .info{
+  // overflow:hidden;
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -23,9 +45,15 @@ header
   background: $greylight02;
   padding-bottom:50px;
   header{
-    display: flex;
-    justify-content:center;
+    opacity:0.85;
+    display:block;
+    width:100%;
     background: $greylight03;
+    h2{
+      
+      text-align:center;
+
+    }
     } 
     h3{
       width:80%;
@@ -41,5 +69,18 @@ header
     } 
 }
 
+/* Page Restaurant */
+.header__resto{
+  height: 260px;
+  margin:0;
+  padding:0;
+  background-image:url("../images/small/restaurant_lapalettedugout_ohmyfood.jpg");
+  // img{
+  //   max-width:400px; 
+  //   opacity:0.6;
+  //   object-fit: cover;
+  //   
+  //   }
+} 
 
 

@@ -11,15 +11,12 @@ main {
   margin: $center-margin;
   
 }
-
 .--blanc{
   background:$white; 
   }
 
 section header, article header{
-  // @include flex-start;
-  padding:15px;
-  animation: openSlide 0.8s ease-in-out 500ms;
+  padding:4px;
 } 
 
 section{
@@ -29,7 +26,5 @@ section{
 
 .main_container {
   padding:20px;
-  @include flex-center;
-  flex-wrap:wrap;
   background:$greylight;
 }

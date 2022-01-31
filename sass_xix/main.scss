@@ -1,12 +1,13 @@
 /**************
 MAIN
 20/01/2022
+31/01/22
 **************/
 
 /* utils */
-@import "./utils/functions";
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/functions";
 
 /* base */
 @import "./base/base";
@@ -22,8 +23,6 @@ MAIN
 @import "./layout/footer";
 @import "./layout/header";
 @import "./layout/navigation";
-
-
 
 /* pages */
 @import "./pages/home";
