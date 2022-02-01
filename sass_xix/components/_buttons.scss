@@ -11,7 +11,8 @@ Buttons
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
+  display: block;
+  overflow: hidden;
   font-size: 16px;
   border-radius: 50px;
   @include shadow;
@@ -78,45 +79,71 @@ Buttons
 }
 
 
+//@include flex-center;
+//@include flex-start;
+//@include flex-icon;
+
+// .icon{
+//   display:block;
+//   height:100%;
+//   width: 30px;
+//   background:#ccc;
+ 
+//   }
+
 /*BTN resto */
-.--carte {
-  font-size:15px;
-  background: $white;
-  display:flex;
-  align-items:flex-start;
-  flex-wrap:nowrap;
-  justify-content: space-between;
-  padding:14px 0 14px 16px;
-  margin-bottom:14px;
-  border-radius: 20px;
-  overflow:hidden;
-  text-overflow:ellipsis;
-  animation: openSlide 600ms ease-out 550ms;
-  // height:69px;
+.icon{
+  right: 0px;
+  width: 0%;
+  .fas {
+    font-size: 20px;
+    display:block;
+    margin:0 auto;
+    height: 70px;
+    color:$white;
+    background:$colour-tertiary;
+  }
+} 
+
+
+.--txt{
+  // padding:14px 0 14px 16px;
+  background: $greylight02;
   p { 
-    margin: 0px;
-    padding:0px;
-    line-height: 0.8; 
-    font-size: 15px; 
+    // margin: 0px;
+    // padding:0px;
     overflow:hidden;
-    text-overflow:ellipsis;
+text-overflow:ellipsis;
+    font-size: 15px; 
+    // height:20px;
    .--euros{
     font-weight: bold;
     color:#000;
     margin-left:30px;
   }
-  .--check{
-    background: $colour-tertiary;
-    font-size:22px;
-    i.fas{
-      color:$white;
-     }
-    }
-  }
-  
+}
+}
+
+
+
+.--carte {
+  // margin: auto;
+  font-size:15px;
+  background: $white;
+  @include flex-start;
+  // padding:14px 0 14px 16px;
+  padding:0;
+  margin-bottom:14px;
+  border-radius: 20px;
+  /**/
+  overflow:hidden;
+  text-overflow:ellipsis;
+  /**/
+  animation: openSlide 600ms ease-out 550ms;
   @include shadow02;
   /* font-size:14px; */
   // animation: openSlide 0.2s ease-in-out 200ms;
+
   a{
     color:$greydark;
     text-decoration: none;
@@ -127,38 +154,42 @@ Buttons
     line-height:0.5;
     
   }
-  
+
   &:hover{
-    overflow:hidden;
-    text-overflow:ellipsis;
+    left: -72%;
     transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;/* 1*/
     .here{
-      background:$white;
+
       transition: background 200ms ease-out 300ms;/* 1*/
     }
     p{
+      height:20px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+      
     .--euros{
       font-weight: bold;
+      overflow:hidden;
+      text-overflow:ellipsis; 
       color:#000;
       transition: margin 200ms ease-out 300ms;/* 1*/
       margin-left:-20px;
     }
-    // .--check{
-    //   padding-left:20px;
-    //   background: $colour-tertiary;
-    //   font-size:22px;
-    //   i.fas{
-    //     color:$white;
-    //    }
-    // }
     
+    }
+    .icon  {
+      height:100%;
+      width: 20%;
+      
     }
 
    
-    
+  
   }
 
 }
+
+
 
 
       
