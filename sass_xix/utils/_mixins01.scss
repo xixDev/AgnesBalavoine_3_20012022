@@ -1,0 +1,162 @@
+/**************
+Mixins
+20/01/2022
+**************/
+//Mixins
+
+// @include margpad;
+@mixin margpad {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin bordershadow{
+	margin:1px;
+	box-shadow: 0 0px 5px 0 rgba(0, 0, 0.8, 0.5); 
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@mixin bordershadow02{
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  // box-shadow: 0px 10px 23px -11px rgba(60, 79, 66, 0.45);
+  box-shadow: 5px 7px 16px 2px rgba(0,0,0,0.4);
+ 
+}
+
+@mixin shadow{
+    box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
+}
+@mixin shadow02{
+box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2; 
+}
+
+//@include flex-center;
+//@include flex-start;
+//@include flex-icon;
+@mixin flex-center {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+@mixin flex-start {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;   
+  } 
+
+@mixin flex-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content:space-between;  
+  } 
+
+@mixin flex-icon02 {
+    display: inline-flex;
+    align-items: center;
+    justify-content:space-around;  
+    } 
+
+/***************
+icons
+***************/
+
+
+// i.fas fa-heart,i.far fa-heart{
+//   color:$gradient;
+
+// }
+
+/*
+background-color: $colour-primary;
+  background-image: $gradient;
+  border-color: lighten($white, 80%);
+*/
+// i.fab {
+//   font-size: 5rem;
+//   font-style: normal;
+//   font-family: fontawesome;
+//   background: -webkit-linear-gradient(225deg, rgb(251, 175, 21), rgb(251, 21, 242),             
+//   rgb(21, 198, 251)) 0% 0% / 300% 300%;
+//   -webkit-background-clip: text;
+//   -webkit-text-fill-color: transparent;
+//   animation: 2s ease 0s infinite normal none running fontgradient;
+//   animation: fontgradient 2s ease infinite;  
+//   }
+
+ // animation: fontgradient 0.8s ease-in-out 150ms;
+  @keyframes fontgradient { 
+  0%{background-position:0% 92%}
+  50%{background-position:100% 9%}
+  100%{background-position:0% 92%}
+  }  
+  
+
+i.fa-heart{
+  color: $black;
+  // background:$white;
+  }
+
+  // i.fa-heart::before {
+  //   content: "\f004";
+  //  font-weight: bold;
+  // transition: color 1s ease-out;
+  //   }  
+
+i.fa-heart:hover{
+  color:$white;
+  opacity:0.6;
+  background: linear-gradient(225deg, rgb(251, 175, 21), rgb(251, 21, 242),             
+  rgb(21, 198, 251)) 0% 0% / 300% 300%;
+  animation: fontgradient 0.8s ease-in-out 150ms;
+  cursor: pointer;
+  }
+
+  i.fa-heart--fa-inverse a:link {
+    color:blue;
+    // background:$gradient;
+    }
+    i.fa-heart--fa-inverse a:hover{
+        color:white;
+        background:$gradient;
+        }
+
+
+
+i.fa-list-ul, i.fa-mobile-alt, i.fa-store { 
+    font-size:20px;
+    width:24px;
+    margin:8px;
+    color:$grey;
+    a &:hover{ 
+        width:24px;
+        margin:8px;
+        color:$colour-secondary;
+        }
+  }
+  
+  i.fa-mobile-alt{
+  font-size:22px;
+  }
+  
+/* icon style*/
+  i.fa-map-marker-alt { 
+  padding:12px; 
+  color:$greydark;
+  width:25px;
+  }
+
+
+
+
+//   i.fa-heart { 
+//     padding:4px; 
+    
+//     background:$white;
+//     }
+
+//     i.fa-heart a{ 
+//     background:$gradient;
+
+//    }  
+

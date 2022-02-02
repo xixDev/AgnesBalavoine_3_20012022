@@ -1,16 +1,9 @@
 /**************
 MAIN
 20/01/2022
+31/01/22
 **************/
 /* utils */
-/**************
-Functions
-20/01/2022
-**************/
-/**************
-Helpers
-20/01/2022
-**************/
 /**************
 Variable
 20/01/2022
@@ -21,6 +14,15 @@ Tertiaire #99E2D0
 **************/
 /* fonction degrade black ?*/
 /**/
+.yellow {
+  background-color: #e6fd75;
+}
+
+.pink {
+  background-color: #fa94be75;
+}
+
+/**/
 /**/
 /* font */
 /**************
@@ -30,13 +32,42 @@ Mixins
 /***************
 icons
 ***************/
+@keyframes fontgradient {
+  0% {
+    background-position: 0% 92%;
+  }
+  50% {
+    background-position: 100% 9%;
+  }
+  100% {
+    background-position: 0% 92%;
+  }
+}
+i.fa-heart {
+  color: #000;
+  animation: fontgradient02 0.8s ease-in-out 150ms;
+}
+i.fa-heart:hover {
+  color: transparent;
+  font-weight: bold;
+  /* :) */
+  position: relative;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  cursor: pointer;
+}
+i.fa-heart:hover::before {
+  transition: color 300ms ease-in-out;
+}
+
 i.fa-list-ul, i.fa-mobile-alt, i.fa-store {
   font-size: 20px;
   width: 24px;
   margin: 8px;
   color: #777;
 }
-a i.fa-list-ul:hover, a i.fa-mobile-alt:hover, a i.fa-store:hover {
+i.fa-list-ul:hover, i.fa-mobile-alt:hover, i.fa-store:hover {
   width: 24px;
   margin: 8px;
   color: #FF79DA;
@@ -53,14 +84,158 @@ i.fa-map-marker-alt {
   width: 25px;
 }
 
+/**************
+Flexbox
+20/01/2022
+**************/
+/***************
+FLEX
+display: flex;
+flex-direction: column;
+align-items: center;
+
+flex-flow: row wrap;
+justify-content: center;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+**************/
+/**************
+Functions
+20/01/2022
+**************/
+@keyframes turnOver {
+  from {
+    opacity: 0;
+    transform: rotate(360deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}
+@keyframes openSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes openSlide02 {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+@keyframes slideX {
+  from {
+    opacity: 0.6;
+    transform: translateX(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-100px);
+  }
+}
+@keyframes slideX02 {
+  from {
+    opacity: 0.2;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes smooth {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shakeX {
+  0% {
+    color: #fff;
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    opacity: 0.5;
+    transform: translateX(5px);
+  }
+  60% {
+    color: #ccc;
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+@keyframes shakeY02 {
+  0% {
+    opacity: 0;
+    background: #fff;
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-15px);
+  }
+  40% {
+    opacity: 0.3;
+    transform: translateY(15px);
+  }
+  60% {
+    color: #ccc;
+    transform: translateY(-15px);
+  }
+  80% {
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes shakeY {
+  0% {
+    transform: translateY(0px);
+  }
+  20% {
+    transform: translateY(-10px);
+  }
+  40% {
+    transform: translateY(10px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
 /* base */
 /**************
 BASE
 20/01/2022
 **************/
-/**
- * Set up a decent box model on the root element
- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -73,8 +248,10 @@ html {
 }
 
 body {
-  background: #ddd;
+  background: linear-gradient(#9356DC, #FF79DA);
+  /*$colour-background*/
   font-family: "Roboto Mono", monospace;
+  opacity: 0.98;
   font-family: "Arial", "Verdana", sans-serif;
 }
 
@@ -89,7 +266,7 @@ Typography rules
 /***************
 TYPO , LINKS
 ***************/
-/* liens */
+/* liens , a:visited*/
 a:link, a:visited {
   text-decoration: none;
   color: #fff;
@@ -128,11 +305,8 @@ h1,h2,h3{
 }
 ***************/
 h1 {
-  /* color: rgb(233, 67, 67);	 */
   font-weight: bold;
   font-size: 25px;
-  text-align: center;
-  margin: 0px 20px 0 20px;
   padding: 8px;
 }
 
@@ -143,7 +317,6 @@ h1 {
 h1.title {
   color: #000;
   font-size: 32px;
-  text-align: center;
 }
 
 h2.title {
@@ -168,6 +341,13 @@ h3 {
   margin: 10px 0 12px 8px;
 }
 
+h4 {
+  font-size: 20px;
+  text-align: left;
+  margin: 10px 0 12px 8px;
+  animation: smooth 800ms ease-in 550ms;
+}
+
 /* components */
 /**************
 BoxThumbs
@@ -180,11 +360,12 @@ BoxThumbs
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   border-radius: 14px;
   background-color: #fff;
+  margin: 15px 20px 20px 10px;
 }
 
 figure.item {
   width: 336px;
-  margin: 10px;
+  padding-bottom: 4px;
 }
 figure.item img {
   width: 336px;
@@ -195,15 +376,11 @@ figure.item img {
 }
 figure.item .love {
   font-size: 22px;
-  color: #000;
   align-self: center;
   overflow: hidden;
-  margin-top: 0px;
 }
 figure.item .love:hover {
   color: #fff;
-  overflow: hidden;
-  background: linear-gradient(#FF79DA, #9356DC);
 }
 figure.item .__new {
   background-color: #99E2D0;
@@ -215,14 +392,14 @@ figure.item .__new {
   z-index: 5;
 }
 figure.item figcaption {
-  margin: 14px 20px 14px 14px;
+  margin: 0px 20px 10px 14px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
 }
-figure.item figcaption h3 {
+figure.item figcaption h4 {
   line-height: 2;
   margin: 0px;
   flex: 1 100%;
@@ -234,10 +411,9 @@ Buttons
 **************/
 /***************
   BTN
-  **************/
+**************/
 .btn {
   border: none;
-  color: #fff;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -246,28 +422,20 @@ Buttons
   border-radius: 50px;
   box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
   cursor: pointer;
+  animation: smooth 600ms ease-in-out 150ms;
 }
 
-.--oh {
-  background: linear-gradient(#FF79DA, #9356DC);
-}
-.--oha:link {
-  color: #eaeaea;
-  text-decoration: none;
-}
-.--oha:hover {
-  color: #9356DC;
-}
-
+/* btn nav */
 .--howto {
-  color: #333;
   width: 90%;
-  text-decoration: none;
-  background: #eaeaea;
+  background: #f6f6f6;
   text-align: left;
   margin: 10px 0 10px 20px;
   border-radius: 25px;
   box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
+}
+.--howto a {
+  color: #000;
 }
 .--howto .rond {
   border-radius: 100%;
@@ -277,68 +445,134 @@ Buttons
   padding: 6px 9px 6px 9px;
   margin: 0 10px 0 -35px;
 }
-.--howto a:link {
-  height: 100%;
-  color: #333;
-  text-decoration: none;
-}
-.--howto a:link:hover {
+.--howto:hover {
   background-color: #f5edff;
+  transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;
+  /* 1*/
 }
-.--howto a:link:hover i.fas {
+.--howto:hover i.fas {
   color: #9356DC;
 }
 
+/* BTN rose */
+.--oh {
+  background-color: #9356DC;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-color: white;
+  box-shadow: 0 1px 4px #9356DC;
+  opacity: 0.9;
+}
+.--oh:link {
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  transition: opacity 200ms ease-in 200ms, background-color 200ms ease-in 300ms;
+  /* 1*/
+}
+.--oh:hover {
+  background-color: white;
+  background-image: linear-gradient(#9356DC, #FF79DA);
+  opacity: 0.8;
+  border-color: #fff;
+  box-shadow: 0 2px 6px #FF79DA;
+  transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 300ms;
+  /* 1*/
+}
+.--oh:active {
+  border-color: #fff;
+}
+
 /*BTN resto */
+.icon {
+  right: 0px;
+  width: 0%;
+  opacity: 0.2;
+  background: #99E2D0;
+}
+.icon i.fas {
+  font-size: 20px;
+  display: block;
+  height: 80px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.--txt {
+  width: 100%;
+  padding: 14px 0 14px 16px;
+}
+.--txt h3 {
+  font-size: 18px;
+  margin-left: -3px;
+  line-height: 0.5;
+}
+.--txt p {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  height: 20px;
+}
+.--txt p .--euros {
+  padding-right: 24px;
+  font-weight: bold;
+  color: #000;
+}
+.--txt p .--legend {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .--carte {
   font-size: 15px;
   background: #fff;
   display: flex;
   align-items: flex-start;
-  flex-wrap: nowrap;
   justify-content: space-between;
-  padding: 14px 0 14px 16px;
+  margin: 0;
+  padding: 0;
   margin-bottom: 14px;
   border-radius: 20px;
+  /**/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  animation: openSlide 600ms ease-out 550ms;
   box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
-  /* font-size:14px; */
+  cursor: pointer;
 }
-.--carte a {
-  color: #333;
-  text-decoration: none;
+.--carte:hover {
+  transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;
+  /* 1*/
 }
-.--carte h3 {
-  font-size: 18px;
-  margin-left: -3px;
-  line-height: 0.5;
+.--carte:hover .--txt {
+  transition: background 200ms ease-out 300ms;
+  /* 1*/
 }
-.--carte .--euros {
-  font-weight: bold;
-  color: #000;
-  margin-left: 30px;
+.--carte:hover p {
+  height: 20px;
 }
-
-.--carte a:hover {
-  background: #e6fd75;
+.--carte:hover p .--legend {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.--carte:hover p .--euros {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: margin 200ms ease-out 300ms, opacity 200ms ease-in 200ms;
+  /* 1*/
+}
+.--carte:hover .icon {
+  width: 5%;
+  opacity: 1;
+  animation: slideX02 500ms ease-in-out 20ms;
+  width: 25%;
+}
+.--carte:hover .icon i.fas {
+  animation: turnOver 1.4s ease-out 340ms;
 }
 
 /* layout */
-/**************
-Flexbox
-20/01/2022
-**************/
-/***************
-FLEX
-display: flex;
-flex-direction: column;
-align-items: center;
-
-flex-flow: row wrap;
-justify-content: center;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-**************/
 /**************
 Footer
 20/01/2022
@@ -348,7 +582,6 @@ Footer
   ***************/
 footer {
   width: 100%;
-  margin-top: 40px;
   background: #333;
   color: #fff;
 }
@@ -380,30 +613,40 @@ footer {
 }
 
 /**************
-Forms
-20/01/2022
-**************/
-/**************
-Grid
-20/01/2022
-**************/
-/**************
 header
 20/01/2022
 **************/
 .header-nav {
   width: 100%;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: #fff;
-}
-.header-nav hr {
-  margin: 1px;
-  box-shadow: 0 0px 5px 0 rgba(0, 0, 1, 0.5);
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 7px 16px 2px rgba(0, 0, 0, 0.4);
+}
+.header-nav h1 {
+  animation: shakeX 800ms ease-out 250ms;
 }
 .header-nav h2 {
   text-align: center;
   font-size: 16px;
+}
+.header-nav .back {
+  position: relative;
+  color: #000;
+  font-size: 22px;
+  left: -70px;
+}
+.header-nav .back:hover i.fas {
+  animation: shakeX 0.8s ease-in-out 150ms;
+  color: #9356DC;
+}
+
+.header-map {
+  opacity: 0.6;
+  background: #f6f6f6;
+  text-align: center;
 }
 
 .info {
@@ -415,9 +658,13 @@ header
   padding-bottom: 50px;
 }
 .info header {
-  display: flex;
-  justify-content: center;
+  opacity: 0.85;
+  display: block;
+  width: 100%;
   background: #eaeaea;
+}
+.info header h2 {
+  text-align: center;
 }
 .info h3 {
   width: 80%;
@@ -430,6 +677,14 @@ header
   text-align: center;
   font-size: 18px;
   color: #656565;
+}
+
+/* Page Restaurant */
+.header__resto {
+  height: 260px;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/small/restaurant_lanoteenchantee_ohmyfood.jpg");
 }
 
 /**************
@@ -449,15 +704,7 @@ ul {
   padding: 20px;
 }
 
-/**************
-Sidebar
-20/01/2022
-**************/
 /* pages */
-/**************
-Contact
-20/01/2022
-**************/
 /**************
 Home
 20/01/2022
@@ -476,7 +723,7 @@ main {
 }
 
 section header, article header {
-  padding: 15px;
+  padding: 4px;
 }
 
 section {
@@ -486,10 +733,6 @@ section {
 
 .main_container {
   padding: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
   background: #F2F2F2;
 }
 
@@ -497,18 +740,8 @@ section {
 Page
 20/01/2022
 **************/
-/* Page Restaurant */
-.header__resto {
-  height: 260px;
-  margin: 0;
-  padding: 0;
-  background-image: url("../images/small/restaurant_lapalettedugout_ohmyfood.jpg");
-  z-index: 8;
-}
-
 .main__resto {
   border-radius: 30px 30px 0px 0px;
-  z-index: 1;
   padding: 20px;
   background: #f6f6f6;
   margin-top: -30px;
@@ -518,6 +751,7 @@ Page
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
+  animation: smooth 600ms ease-in-out 150ms;
 }
 .main__resto header h2 {
   font-size: 26px;
@@ -532,32 +766,14 @@ Page
 }
 .main__resto header .love:hover {
   color: #fff;
-  background: linear-gradient(#FF79DA, #9356DC);
+}
+.main__resto h4 {
+  text-transform: uppercase;
 }
 .main__resto section {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
 }
-
-/* theme */
-/**************
-Admin 
-20/01/2022
-**************/
-/**************
-Theme
-20/01/2022
-**************/
-/* vendors */
-/**************
-Booxstrap
-20/01/2022
-**************/
-/**************
-jQuery
-20/01/2022
-**************/
 
 /*# sourceMappingURL=style.css.map */

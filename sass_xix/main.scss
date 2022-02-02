@@ -7,6 +7,7 @@ MAIN
 /* utils */
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./layout/flexbox";
 @import "./utils/functions";
 
 /* base */
@@ -20,7 +21,7 @@ MAIN
 // @import "./components/buttonsNew";
 
 /* layout */
-@import "./layout/flexbox";
+
 @import "./layout/footer";
 @import "./layout/header";
 @import "./layout/navigation";

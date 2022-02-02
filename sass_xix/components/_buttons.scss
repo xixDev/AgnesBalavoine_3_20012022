@@ -11,16 +11,32 @@ Buttons
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
-  display: block;
-  overflow: hidden;
+  display: inline-block;
+  // overflow: hidden;
   font-size: 16px;
   border-radius: 50px;
   @include shadow;
   cursor: pointer; 
   animation: smooth 600ms ease-in-out 150ms;
-  // animation: shakeY02 800ms ease-in 550ms;
-  // transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;
 }
+
+// .btn {
+//   position: relative;
+//   z-index: 1;
+//   &:hover {
+//     &::after {
+//         opacity: 1;
+//     }
+// }
+// &::after {
+//     content: "";
+//     position: absolute;
+//     background: $gradient;
+//     opacity: 0;
+//     z-index: -1;
+//     transition: opacity 250ms;
+// }
+// }
 
 
 /* btn nav */
@@ -83,103 +99,101 @@ Buttons
 //@include flex-start;
 //@include flex-icon;
 
-// .icon{
-//   display:block;
-//   height:100%;
-//   width: 30px;
-//   background:#ccc;
- 
-//   }
 
 /*BTN resto */
 .icon{
   right: 0px;
   width: 0%;
-  .fas {
+  opacity:0.2;
+  background:$colour-tertiary;
+  i.fas {
     font-size: 20px;
     display:block;
-    margin:0 auto;
-    height: 70px;
+    height: 80px;
     color:$white;
-    background:$colour-tertiary;
+    @include flex-center;
+    
+    
   }
+  
 } 
 
-
 .--txt{
-  // padding:14px 0 14px 16px;
-  background: $greylight02;
+   width:100%; 
+  padding:14px 0 14px 16px;
+  h3{
+    font-size:18px;
+    margin-left:-3px;
+    line-height:0.5; 
+  }
   p { 
-    // margin: 0px;
-    // padding:0px;
-    overflow:hidden;
-text-overflow:ellipsis;
+    @include margpad;
+    display:flex;
+    justify-content:space-between;
+    // overflow:hidden;
+    // text-overflow:ellipsis;
     font-size: 15px; 
-    // height:20px;
+    height:20px;
    .--euros{
+    padding-right:24px;
     font-weight: bold;
     color:#000;
-    margin-left:30px;
+  }
+  .--legend{
+    overflow:hidden;
+    text-overflow:ellipsis;
   }
 }
 }
-
 
 
 .--carte {
-  // margin: auto;
   font-size:15px;
   background: $white;
   @include flex-start;
-  // padding:14px 0 14px 16px;
-  padding:0;
+  @include margpad;
   margin-bottom:14px;
   border-radius: 20px;
   /**/
   overflow:hidden;
   text-overflow:ellipsis;
-  /**/
   animation: openSlide 600ms ease-out 550ms;
   @include shadow02;
-  /* font-size:14px; */
-  // animation: openSlide 0.2s ease-in-out 200ms;
-
-  a{
-    color:$greydark;
-    text-decoration: none;
-  }
-  h3{
-    font-size:18px;
-    margin-left:-3px;
-    line-height:0.5;
-    
-  }
-
+  cursor: pointer; 
   &:hover{
-    left: -72%;
     transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;/* 1*/
-    .here{
+    // left: -72%;
+   
+    // left: -72%;
 
+    .--txt{
       transition: background 200ms ease-out 300ms;/* 1*/
     }
     p{
-      height:20px;
+    height:20px;
+    
+  .--legend{
     overflow:hidden;
     text-overflow:ellipsis;
-      
+  }
     .--euros{
-      font-weight: bold;
       overflow:hidden;
-      text-overflow:ellipsis; 
-      color:#000;
-      transition: margin 200ms ease-out 300ms;/* 1*/
-      margin-left:-20px;
+  text-overflow:ellipsis;
+      transition: margin 200ms ease-out 300ms,opacity 200ms ease-in 200ms;/* 1*/
+      // margin-left:5px;
     }
-    
+  
     }
     .icon  {
-      height:100%;
-      width: 20%;
+      width: 5%;
+      opacity:1;
+      // transition: width 300ms ease-in 50ms;  
+      // transition: opacity 200ms ease-in 200ms;
+      animation: slideX02 500ms ease-in-out 20ms;
+      width: 25%;
+      i.fas {
+        animation: turnOver 1.4s ease-out 340ms;
+      }
       
     }
 

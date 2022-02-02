@@ -9,6 +9,7 @@ Page
   background:$greylight02;
   margin-top:-30px;
 
+
   header {
     width:100%; 
     @include flex-icon;
@@ -22,12 +23,14 @@ Page
       }
       .love{
         font-size:22px;
-        align-self:baseline;  
+        align-self:baseline; 
       } 
       .love:hover{
         color:$white; 
-        background: $gradient; 
       } 
+  }
+  h4{
+    text-transform:uppercase;
   }
   section {
     @include flex-center;    

@@ -3,6 +3,24 @@ Functions
 20/01/2022
 **************/
 
+// animation: shakeX 0.8s ease-in-out 150ms;
+// animation: smooth 0.8s ease-in-out 150ms;
+// animation: slideX 0.8s ease-in-out 150ms;
+// animation: turnOver 0.8s ease-in-out 150ms;
+
+@keyframes turnOver {
+    from {
+        opacity:0;
+        transform:rotate(360deg);
+    }
+    to {
+        opacity:1;
+        transform:rotate(-360deg);
+    }
+}
+
+
+
 @keyframes openSlide {
     from {
         opacity:0;
@@ -24,6 +42,31 @@ Functions
         transform: translateY(-20px)
     }
 }
+
+@keyframes slideX {
+    from {
+        opacity:0.6;
+        transform: translateX(0px)
+    }
+    to {
+        opacity:1;
+        transform: translateX(-100px)
+    }
+}
+
+
+@keyframes slideX02 {
+    from {
+        opacity:0.2;
+        transform: translateX(100px)
+    }
+    to {
+        opacity:1;
+        transform: translateX(0px)
+    }
+}
+
+
 
 @keyframes smooth {
     from {

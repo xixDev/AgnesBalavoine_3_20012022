@@ -26,14 +26,14 @@ BoxThumbs
     }
       .love{
       font-size:22px;
-      color:$black;
+      // color:$black;
       align-self:center;  
       overflow:hidden;
     }
       .love:hover{ 
         color:$white; 
-        background-image: $gradient;
-        stroke: black;
+        // background-image: $gradient;
+        // stroke: black;
     }
       .__new {
       background-color: $colour-tertiary;

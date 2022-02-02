@@ -16,3 +16,31 @@ justify-content: center;
 align-items: center;
 **************/
 
+//@include flex-center;
+//@include flex-start;
+//@include flex-icon;
+
+@mixin flex-center {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+@mixin flex-start {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;   
+    } 
+  
+@mixin flex-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content:space-between;  
+} 
+  
+@mixin flex-icon02 {
+    display: inline-flex;
+    align-items: center;
+    justify-content:space-around;  
+ } 
+
