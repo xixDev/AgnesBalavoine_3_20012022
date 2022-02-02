@@ -112,26 +112,29 @@ Buttons
     height: 80px;
     color:$white;
     @include flex-center;
-    
-    
   }
   
 } 
 
 .--txt{
-   width:100%; 
+  width:100%; 
+  //  width:360px;/**/
   padding:14px 0 14px 16px;
+  // overflow:hidden;
+  //   text-overflow:ellipsis;
   h3{
     font-size:18px;
     margin-left:-3px;
     line-height:0.5; 
   }
   p { 
+    // width:360px;
+    //white-space 
     @include margpad;
     display:flex;
     justify-content:space-between;
-    // overflow:hidden;
-    // text-overflow:ellipsis;
+    overflow:hidden;
+    text-overflow:ellipsis;
     font-size: 15px; 
     height:20px;
    .--euros{
@@ -140,12 +143,12 @@ Buttons
     color:#000;
   }
   .--legend{
+    
     overflow:hidden;
     text-overflow:ellipsis;
   }
 }
 }
-
 
 .--carte {
   font-size:15px;
@@ -189,10 +192,10 @@ Buttons
       opacity:1;
       // transition: width 300ms ease-in 50ms;  
       // transition: opacity 200ms ease-in 200ms;
-      animation: slideX02 500ms ease-in-out 20ms;
+      animation: slideX02 650ms ease-in-out 20ms;
       width: 25%;
       i.fas {
-        animation: turnOver 1.4s ease-out 340ms;
+        animation: turnOver 800ms ease-out 340ms;
       }
       
     }

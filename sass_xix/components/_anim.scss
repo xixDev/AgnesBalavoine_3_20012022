@@ -1,5 +1,5 @@
 /**************
-Functions
+Anim
 20/01/2022
 **************/
 
@@ -11,7 +11,7 @@ Functions
 @keyframes turnOver {
     from {
         opacity:0;
-        transform:rotate(360deg);
+        transform:rotate(-90deg);
     }
     to {
         opacity:1;
@@ -20,37 +20,36 @@ Functions
 }
 
 
-
 @keyframes openSlide {
     from {
         opacity:0;
-        transform: translateY(-40px)
+        transform: translateY(-40px);
     }
     to {
         opacity:1;
-        transform: translateY(0px)
+        transform: translateY(0px);
     }
 }
 
 @keyframes openSlide02 {
     from {
         opacity:0;
-        transform: translateY(0px)
+        transform: translateY(0px);
     }
     to {
         opacity:1;
-        transform: translateY(-20px)
+        transform: translateY(-20px);
     }
 }
 
 @keyframes slideX {
     from {
         opacity:0.6;
-        transform: translateX(0px)
+        transform: translateX(0px);
     }
     to {
         opacity:1;
-        transform: translateX(-100px)
+        transform: translateX(-100px);
     }
 }
 
@@ -58,11 +57,11 @@ Functions
 @keyframes slideX02 {
     from {
         opacity:0.2;
-        transform: translateX(100px)
+        transform: translateX(100px);
     }
     to {
         opacity:1;
-        transform: translateX(0px)
+        transform: translateX(0px);
     }
 }
 

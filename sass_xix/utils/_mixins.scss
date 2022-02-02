@@ -50,12 +50,14 @@ i.fa-heart{
     position: relative;
     background-clip: text;
     -webkit-background-clip: text;
-    background-image: $gradient;
+    background-image: $gradient-reverse;
     cursor: pointer;
     &::before {
     transition: color 300ms ease-in-out;
-    
-    }
+    }   
+}
+&:active { 
+  background-image: $gradient-reverse; 
 }
 }
 

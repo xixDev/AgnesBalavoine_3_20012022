@@ -7,8 +7,11 @@ Typography rules
 TYPO , LINKS
 ***************/
 /* liens , a:visited*/
-a:link, a:visited{text-decoration: none; color:$white;} 
-a:hover { text-decoration: none; color:$colour-primary;} 
+// a:link, a:visited{text-decoration: none; color:$white;} 
+// a:hover { text-decoration: none; color:$greylight03;} 
+
+a:link, a:visited{text-decoration: none; color:$greylight03;} 
+a:hover { text-decoration: none; color:$white;} 
 
 p { 
 	margin: 0px;
