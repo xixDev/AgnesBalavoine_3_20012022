@@ -72,9 +72,15 @@ header
 /* Page Restaurant */
 .header__resto{
   height: 260px;
-  margin:0;
-  padding:0;
-  background-image:url("../images/small/restaurant_lanoteenchantee_ohmyfood.jpg");
+  // margin:0;
+  // padding:0;
+  // background-image:url("../images/small/restaurant_lanoteenchantee_ohmyfood.jpg");
+  &__image {
+    // max-width:400px; 
+    // opacity:0.6;
+    object-fit: cover;
+    @include img-ratio;
+}
   // img{
   //   max-width:400px; 
   //   opacity:0.6;

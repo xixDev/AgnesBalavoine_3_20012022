@@ -7,8 +7,16 @@ Home
 sections
 **************/
 main {
-  max-width: 400px;/*400 992*/
+  max-width: 1030px;/*400 992*/
   margin: $center-margin;
+  @include for-phone-only{
+    max-width: 400px; 
+    background:blueviolet;
+  }
+  @include for-tablet{
+    max-width: 700px;
+    background:rgb(103, 248, 67);
+  }
   
 }
 .--blanc{
@@ -18,13 +26,13 @@ main {
 section header, article header{
   padding:4px;
 } 
-
 section{
    padding-bottom:40px;
    align-self:center; 
   }
 
-.main_container {
+.main__home {
   padding:20px;
   background:$greylight;
+  
 }

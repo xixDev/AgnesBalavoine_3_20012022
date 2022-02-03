@@ -28,19 +28,46 @@ Mixins
 box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2; 
 }
 
+/**/
+@mixin img-ratio {
+  width: 100%;
+      display: block;
+      overflow: hidden;
+      padding-top: 65%;/*56.25%*/
+      position: relative;
+      z-index:10;
+      & img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          width: 100%;
+          transform: translate(-50%, -50%);
+      }
+}
+
+/* responsive */
+// @include for-phone-only;
+// @include for-phone-only;
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+
+@mixin for-tablet {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
 
 
 /***************
 icons
 ***************/
- // animation: fontgradient 0.8s ease-in-out 150ms;
- @keyframes fontgradient { 
-  0%{background-position:0% 92%}
-  50%{background-position:100% 9%}
-  100%{background-position:0% 92%}
-  } 
  
-
 i.fa-heart{
   color: $black;
   animation: fontgradient02 0.8s ease-in-out 150ms;
