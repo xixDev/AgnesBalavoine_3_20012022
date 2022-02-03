@@ -1,6 +1,6 @@
 # ohmyfood 
 # xix
-# https://www.xix.name
+
 
 start : 05/01/22
 finish :
