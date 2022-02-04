@@ -11,13 +11,15 @@ Footer
     width: 100%;
     background:$greydark;
     color:$white;
+    
   }
   
-  .footer_nav{
-    display:flex;
+  footer{
+    
     h3 {
       // margin-left:14px;
       line-height:0.9;
+      margin:3px 30px 0 0;
     }
     ul a {
       color:$white;
@@ -36,9 +38,14 @@ Footer
   }
   
   .itemFooter{
-    display:flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
+    // display:flex;
+    // flex-flow: column wrap;
+    // align-items: flex-start;
+    @include for-desktop{
+      @include flex-start;
+      flex-wrap: wrap;
+    }
+  
   }
   
   

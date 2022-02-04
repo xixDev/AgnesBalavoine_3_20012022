@@ -46,21 +46,28 @@ box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
 }
 
 /* responsive */
-// @include for-phone-only;
-// @include for-phone-only;
-
-@mixin for-phone-only {
-  @media (max-width: 599px) { @content; }
+// @include for-phone;
+// @include for-tablet;
+// @include for-desktop;
+/*
+@include for-phone{
+    max-width: 400px; 
+  }
+  @include for-tablet{
+    max-width: 700px;
+  }
+  @include for-desktop{
+    max-width: 1030px;
+  }
+*/
+@mixin for-phone {
+  @media only screen and (min-width:280px) and (max-width:768px) { @content; }
 }
-
 @mixin for-tablet {
-  @media (min-width: 900px) { @content; }
+  @media only screen and (min-width:769px) and (max-width:990px)  { @content; }
 }
-@mixin for-desktop-up {
-  @media (min-width: 1200px) { @content; }
-}
-@mixin for-big-desktop-up {
-  @media (min-width: 1800px) { @content; }
+@mixin for-desktop {
+  @media (min-width: 991px) { @content; }
 }
 
 

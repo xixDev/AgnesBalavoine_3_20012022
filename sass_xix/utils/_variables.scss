@@ -8,6 +8,7 @@ Tertiaire #99E2D0
 **************/
 
 $colour-primary: #9356DC;
+
 $colour-primary-light:#f5edff;
 $colour-secondary: #FF79DA;
 $colour-tertiary :#99E2D0;
@@ -25,12 +26,15 @@ $greydark: #333;
 $black: #000;
 
 /**/
-
+.tprimary{color:$colour-primary;}
+.tsecondary{color:$colour-secondary;}
+.ttertiary{color:$colour-tertiary;}
 
 $yellow:#e6fd75;
 .yellow{background-color:$yellow;}
 $pink:#fa94be75;
 .pink{background-color:$pink;}
+
 
 $gradient:linear-gradient(#FF79DA,#9356DC);
 $gradient-reverse:linear-gradient(#9356DC,#FF79DA);

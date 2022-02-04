@@ -3,15 +3,37 @@ Navigation
 20/01/2022
 **************/
 
-.nav {
-  background: $white;
-  padding-bottom:40px;
+nav {
+  @include flex-start;
+  @include for-desktop{
+    @include margpad;
+    flex-wrap: nowrap;
+    margin-right:20px;
+  }
+  @include for-phone{
+    flex-wrap: wrap;
+    padding-bottom:40px;
+  }
+  @include for-tablet{
+    flex-wrap: wrap;
+    padding-bottom:40px;
+  }
+  
 }
 
+
+
 ul {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
   list-style: none; 
   padding:20px;
+
+  @include for-desktop{
+    width:800px;
+    @include flex-center;
+    align-items:space-between;
+    flex-wrap: nowrap;
+  }
 }

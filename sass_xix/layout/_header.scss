@@ -2,6 +2,10 @@
 header
 20/01/2022
 **************/
+header{
+ flex :1 100%;
+}
+
 .header-nav{
   width: 100%; 
   @include flex-center;
@@ -37,11 +41,7 @@ header
 }
 
 .info{
-  // overflow:hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
-  justify-content:center;
+  @include flex-col;
   background: $greylight02;
   padding-bottom:50px;
   header{
@@ -72,21 +72,10 @@ header
 /* Page Restaurant */
 .header__resto{
   height: 260px;
-  // margin:0;
-  // padding:0;
-  // background-image:url("../images/small/restaurant_lanoteenchantee_ohmyfood.jpg");
   &__image {
-    // max-width:400px; 
-    // opacity:0.6;
     object-fit: cover;
     @include img-ratio;
 }
-  // img{
-  //   max-width:400px; 
-  //   opacity:0.6;
-  //   object-fit: cover;
-  //   
-  //   }
 } 
 
 

@@ -20,6 +20,8 @@ Anim
 }
 
 
+
+
 @keyframes openSlide {
     from {
         opacity:0;
@@ -173,3 +175,80 @@ Anim
     100%{background-position:0% 92%}
     }
 
+/**/
+.loading{
+    position:absolute;
+    // background: $white;
+    // color:$colour-primary;
+    // background: $black;
+    // color:$colour-primary;
+    background: $gradient;
+    color:$white;
+    height:100%;
+    width: 100%;
+    @include flex-center;
+    z-index: 100;
+      
+    animation: spinner 1.8s ease-in 10ms;
+    animation-fill-mode: forwards;
+        animation-delay: 1s;
+      .title{
+        opacity:0.6;
+        font-size:160px;
+        transition: color 200ms ease-in 20ms;
+        animation: spinner02 0.3s linear 90ms;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+    }
+    .ooo{
+      animation: spinner02 0.6s ease-in-out 0ms;
+      animation-fill-mode: forwards;
+        animation-delay: 1s;
+    }
+}
+// animation: spinner 0.8s ease-in-out 150ms;
+@keyframes spinner { 
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:0.5;
+        // transform: translateY(400px);
+    }
+    100%{
+        opacity:0;
+        // transform: translateY(0);
+    }
+    }
+
+// animation: spinner 0.8s ease-in-out 150ms;
+@keyframes spinner02 { 
+    0%{
+        opacity:1;
+            transform:rotate(-90deg);
+            
+    }
+    50%{
+        opacity:0.5;
+        transform:rotate(-360deg);
+        transform:scale(1);
+        // transform: translateY(400px);
+    }
+    100%{
+        opacity:0;
+        transform:scale(2);
+        // transform: translateY(0);
+    }
+    }    
+
+    @keyframes turnOver02 {
+        from {
+            opacity:1;
+            transform:rotate(-90deg);
+            transform:scale(2);
+        }
+        to {
+            opacity:0;
+            transform:rotate(-360deg);
+        }
+    }  

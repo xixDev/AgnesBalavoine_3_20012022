@@ -9,11 +9,13 @@ MAIN
 @import "./utils/mixins";
 @import "./layout/flexbox";
 @import "./components/anim";
+@import "./layout/navigation";
 
 /* base */
 @import "./base/base";
 @import "./base/reset";
 @import "./base/typography";
+
 
 /* components */
 @import "./components/boxThumb";
@@ -22,9 +24,9 @@ MAIN
 
 /* layout */
 
-@import "./layout/footer";
 @import "./layout/header";
-@import "./layout/navigation";
+@import "./layout/footer";
+
 
 /* pages */
 @import "./pages/home";
