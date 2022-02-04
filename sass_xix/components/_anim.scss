@@ -177,71 +177,157 @@ Anim
 
 /**/
 .loading{
-    position:absolute;
-    // background: $white;
-    // color:$colour-primary;
-    // background: $black;
-    // color:$colour-primary;
-    background: $gradient;
-    color:$white;
+    position:fixed;
+    background: $white;
+    color:#333;
+
+    // background:$colour-primary-light;
+    // color:$white;
+
+    // background: $gradient;
+    // color:$white;
+
     height:100%;
     width: 100%;
     @include flex-center;
     z-index: 100;
-      
-    animation: spinner 1.8s ease-in 10ms;
+    animation: fade 1.8s ease-in 10ms;
     animation-fill-mode: forwards;
-        animation-delay: 1s;
+    animation-delay: 1.2s;
       .title{
-        opacity:0.6;
-        font-size:160px;
-        transition: color 200ms ease-in 20ms;
-        animation: spinner02 0.3s linear 90ms;
+        opacity:0.8;
+        @include for-desktop{
+            font-size:130px;
+          }
+          @include for-tablet{
+            font-size:100px;
+          }
+          @include for-phone{
+            font-size:50px;
+          }
+        // font-size:160px;
+        
+        //animation: spinner 0.8s ease-in-out 50ms;
+        animation: fade 0.6s linear 90ms;
+        
         animation-fill-mode: forwards;
         animation-delay: 1s;
+        text-shadow:$shadow03;
+        
     }
     .ooo{
-      animation: spinner02 0.6s ease-in-out 0ms;
+      // animation: spinner02 0.9s ease-in-out;
+     //animation: spinner04 0.5s ease-out 0ms;
+      animation: spinner04 0.6s ease-in-out 30ms;
       animation-fill-mode: forwards;
-        animation-delay: 1s;
+      animation-delay: 1s;
+      //text-shadow: unset;
+   
     }
 }
 // animation: spinner 0.8s ease-in-out 150ms;
-@keyframes spinner { 
+@keyframes fade { 
     0%{
         opacity:1;
     }
     50%{
         opacity:0.5;
-        // transform: translateY(400px);
     }
     100%{
         opacity:0;
-        // transform: translateY(0);
+        z-index : -50;
     }
     }
 
 // animation: spinner 0.8s ease-in-out 150ms;
 @keyframes spinner02 { 
     0%{
-        opacity:1;
-            transform:rotate(-90deg);
-            
+        opacity:0.4;
+        transform:rotate(-90deg);  
     }
     50%{
-        opacity:0.5;
+        opacity:0.9;
         transform:rotate(-360deg);
-        transform:scale(1);
-        // transform: translateY(400px);
+        
     }
     100%{
         opacity:0;
-        transform:scale(2);
-        // transform: translateY(0);
+        transform:scale(4);
     }
-    }    
+    }  
+    @keyframes spinner04 { 
+        0%{
+            opacity:0.4;
+            transform-origin: center;
+            transform: translateY(20px);
+        }
+        20%{
+            opacity:0.8;
+            
+            transform:rotate(0deg);  
+        }
 
-    @keyframes turnOver02 {
+        40%{
+            opacity:0.8;
+            transform:rotate(90deg);    
+        }
+        70%{
+            opacity:0.4;
+            transform:rotate(180deg);
+            
+            
+        }
+        100%{
+            opacity:0;
+            transform:rotate(240deg);
+            
+        }
+        }  
+
+        @keyframes spinner05 { 
+            0%{
+                opacity:0.2;
+                transform-origin: center;
+                transform:rotate(0deg);  
+            }
+    
+            30%{
+                opacity:0.8;
+                transform:rotate(90deg); 
+         
+                
+            }
+            70%{
+                opacity:0.4;
+                transform:rotate(180deg);
+                
+                
+            }
+            100%{
+                opacity:0;
+                transform:rotate(240deg);
+                
+            }
+            } 
+
+
+@keyframes spinner { 
+        0%{
+            opacity:0.4;
+            transform:rotate(120deg);    
+        }
+        50%{
+            opacity:0.5;
+            transform:rotate(-360deg);
+        }
+        100%{
+            opacity:0;
+        }
+        } 
+
+
+
+@keyframes turnOver02 {
         from {
             opacity:1;
             transform:rotate(-90deg);

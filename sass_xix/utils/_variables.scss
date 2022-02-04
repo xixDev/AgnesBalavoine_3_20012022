@@ -52,11 +52,10 @@ $layout-margin: 6rem;
 
 $shadowbox: 0 3px 3px rgba(0, 0, 0, 0.1);
 
+$shadow:6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
+$shadow02:6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
+$shadow03:3px 3px 6px #dad8d8, -3px -3px 6px #c4bdbd;
 
-$shadow-1: rgba(#000,.5) -200px 0 0;
-$shadow-2: rgba(#000,.4) -400px 0 0;
-$shadow-3: rgba(#000,.3) -600px 0 0;
-$shadow-4: rgba(#000,.2) -800px 0 0;
 
 /* font */
 // $font-site(font_name,font_style) :font-family: 'Shrikhand', cursive;

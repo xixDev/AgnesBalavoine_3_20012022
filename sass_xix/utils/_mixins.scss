@@ -22,10 +22,10 @@ Mixins
 }
 
 @mixin shadow{
-  box-shadow: 6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
+  box-shadow: $shadow;
 }
 @mixin shadow02{
-box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2; 
+box-shadow: $shadow02;
 }
 
 /**/
