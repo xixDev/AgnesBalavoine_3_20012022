@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS   -->    
+    <!-- CSS   --> 
+    <link rel="stylesheet" type="text/css" href="css_xix/normalize.css" />   
     <link rel="stylesheet" type="text/css" href="css_xix/style.css" /> 
    
 
@@ -23,9 +24,9 @@
 <body>
   <!--////////////// Projet 03 - Ohmyfood! ////////////////////-->
     <!-- /loader/ --> 
-    <div class="loading">
+    <!-- <div class="loading">
       <span class="title tprimary ooo">o</span><span class="title">myf</span><span class="title tsecondary ooo">o</span><span class="title ttertiary ooo">o</span><span class="title">d</span>
-     </div>
+    </div> -->
 
   <main>
    
@@ -41,18 +42,20 @@
         </header>
         <h3>Réservez le menu qui vous convient</h3>
         <p>découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <button class="btn --oh"><a href="menu.html" target="_blank">&#160;Explorez nos restaurants&#160;</a></button>
+        
+         <a href="html/menu.html"><div class="btn__oh">Explorez nos restaurants</div></a>
+
     </section>
 
     <!--/// -->
-    <section class="--blanc">
+    <section class="white">
         <header>
           <h4>Fonctionnement</h4>  
         </header>
         <nav>
-          <button class="btn --howto"><span class="rond">1</span><a href="#restaurant"><i class="fas fa-mobile-alt"></i>Choississez un restaurant</a></button>
-          <button class="btn --howto"><span class="rond">2</span><a href="#menu"><i class="fas fa-list-ul"></i>Composez-votre menu</a></button>
-          <button class="btn --howto"><span class="rond">3</span><a href="#surplace"><i class="fas fa-store"></i>Dégustez au restaurant</a></button>
+          <div class="btn__howto"><span class="btn__howto__circle">1</span><a href="#restaurant"><i class="fas fa-mobile-alt"></i>Choississez un restaurant</a></div>
+          <div class="btn__howto"><span class="btn__howto__circle">2</span><a href="#menu"><i class="fas fa-list-ul"></i>Composez-votre menu</a></div>
+          <div class="btn__howto"><span class="btn__howto__circle">3</span><a href="#surplace"><i class="fas fa-store"></i>Dégustez au restaurant</a></div>
         </nav>
         <!--/// -->
     </section>
@@ -66,16 +69,16 @@
      
         <figure class="item">
           <a href="menu.html">
-          <span class="__new">Nouveaux</span>
+          <span class="__new">Nouveau</span>
           <img src="images/small/restaurant_lapalettedugout_ohmyfood.jpg" alt="La palette du gôut" />
-        </a>
+          </a>
           <figcaption>
             <h4>La palette du goût</h4>
             <span>Ménilmontant</span>
             <a href="#"><span class="love"><i class="far fa-heart"></i></span></a>
           </figcaption>
         </figure>
-      </a>
+      
 
       <!-- //restaurants -->
         <figure class="item">
@@ -89,7 +92,7 @@
             <a href="#"><span class="love"><i class="far fa-heart"></i></span></a>
           </figcaption>
         </figure>
-      </a>
+      
 
       <!-- //restaurants -->
         <figure class="item">
@@ -102,10 +105,9 @@
             <a href="#"><span class="love"><i class="far fa-heart"></i></span></a>
           </figcaption>
         </figure>
-      </a>
+      
 
       <!-- //restaurants -->
-      <a href="menu.html">
         <figure class="item">
           <a href="menu.html">
           <img src="images/small/restaurant_ledelicedessens__ohmyfood.jpg" alt="La palette du gôut" />
@@ -116,8 +118,6 @@
             <a href="#"><span class="love"><i class="far fa-heart"></i></span></a>
           </figcaption>
         </figure>
-       
-      
       </section>
   
 <!-- // -->
@@ -130,7 +130,7 @@
         <li><i class="fas fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
         <li><i class="fas fa-hands-helping"></i><a href="#">Devenir partenaire</a></li>
         <li><a href="#">Mentions légales</a></li>
-        <li><a href="mailto:someone@yoursite.com?subject=ohmyfood contact">Contact</a></li>
+        <li><a href="mailto:someone@yoursite.com">Contact</a></li>
       </ul>   
   </footer> 
 
