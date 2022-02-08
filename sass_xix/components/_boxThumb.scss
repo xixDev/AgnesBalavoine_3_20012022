@@ -2,16 +2,29 @@
 BoxThumbs
 **************/
 
-  .item{
+.item{
     box-shadow: $shadowbox;
     border-radius: 14px;
     background-color: $white;
     margin:15px 20px 20px 10px;
-
-    
+      &__new {
+        background-color: $colour-tertiary;
+        position:absolute;
+        margin:14px 0 0 240px;
+        padding:8px 13px 8px 13px;
+        font-size:13px;
+        color:$colour-tertiary-dark; 
+        z-index:5;
+        @include for-desktop{
+          margin:10px 0 0 350px;
+        }
+        @include for-tablet{
+          margin:10px 0 0 350px;
+        }
+    } 
   }
 
-  figure.item{
+figure.item{
     @include for-desktop{
       width:436px;
     }
@@ -35,50 +48,18 @@ BoxThumbs
       @include for-tablet{
         height: 274px;
       }
-      
     }
-    .__new {
-      background-color: $colour-tertiary;
-      position:absolute;
-      margin:10px 0 0 250px;
-      padding:8px;
-      font-size:13px;
-      color:$colour-tertiary-dark; 
-      z-index:5;
-      @include for-desktop{
-        margin:10px 0 0 350px;
-      }
-      @include for-tablet{
-        margin:10px 0 0 350px;
-      }
-    }
-      .love{
-      font-size:22px;
-      // color:$black;
-      align-self:center;  
-      overflow:hidden;
-    }
-      .love:hover{ 
-        color:$white; 
-        // background-image: $gradient;
-        // stroke: black;
-    }
-      
       figcaption  {
       margin:0px 20px 10px 14px;
-      display:flex;
-      flex-direction: row;
+      @include flex-start;
       flex-wrap: wrap;
-      align-items: flex-start;  
-      justify-content: space-between; 
-       h4  {
+        & h4  {
         line-height: 2.0; 
         margin:0px ; 
         flex: 1 100%; 
-      }
-    
+      }  
    }
-  }
+}
   
  
 

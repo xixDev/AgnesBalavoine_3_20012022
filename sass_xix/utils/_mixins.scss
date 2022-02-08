@@ -47,28 +47,21 @@ box-shadow: $shadow02;
 // @include for-phone;
 // @include for-tablet;
 // @include for-desktop;
-/*
-  @include for-desktop{
-    max-width: 1030px;
-  }
-  @include for-tablet{
-    max-width: 700px;
-  }
-  @include for-phone{
-    max-width: 400px; 
-  }
-  
-*/
 @mixin for-phone {
-  @media only screen and (min-width:280px) and (max-width:768px) { @content; }
+  @media only screen and (max-width:768px) { 
+    @content; 
+  }
 }
 @mixin for-tablet {
-  @media only screen and (min-width:769px) and (max-width:990px)  { @content; }
+  @media only screen and (min-width:769px) and (max-width:990px)  { 
+    @content; 
+  }
 }
 @mixin for-desktop {
-  @media (min-width: 991px) { @content; }
+  @media (min-width: 991px) { 
+    @content; 
+  }
 }
-
 
 /***************
 icons
@@ -76,6 +69,7 @@ icons
  
 i.fa-heart{
   color: $black;
+  font-size:22px;
   animation: fontgradient02 0.8s ease-in-out 150ms;
   &:hover {
     color: transparent;
@@ -88,10 +82,10 @@ i.fa-heart{
     &::before {
     transition: color 300ms ease-in-out;
     }   
-}
-&:active { 
-  background-image: $gradient-reverse; 
-}
+  }
+    &:active { 
+    background-image: $gradient-reverse; 
+    }
 }
 
 
