@@ -1,8 +1,6 @@
 /**************
-Navigation
-20/01/2022
+navigation
 **************/
-
 nav {
   @include flex-start;
   @include for-desktop{
@@ -22,18 +20,13 @@ nav {
 }
 
 
-
 ul {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
   list-style: none; 
   padding:20px;
-
   @include for-desktop{
     width:800px;
     @include flex-center;
-    align-items:space-between;
+    // align-items:space-between;
     flex-wrap: nowrap;
   }
 }

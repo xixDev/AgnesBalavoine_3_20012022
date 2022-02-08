@@ -8,7 +8,7 @@ MAIN
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./layout/flexbox";
-@import "./components/anim";
+@import "./utils/functions";
 @import "./layout/navigation";
 
 /* base */
@@ -20,7 +20,7 @@ MAIN
 /* components */
 @import "./components/boxThumb";
 @import "./components/buttons";
-// @import "./components/buttonsNew";
+@import "./components/anim";
 
 /* layout */
 

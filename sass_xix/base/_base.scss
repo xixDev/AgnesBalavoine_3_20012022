@@ -1,8 +1,6 @@
 /**************
 BASE
-20/01/2022
 **************/
-
 @charset "utf-8";
 
 * {
@@ -16,7 +14,7 @@ html {
  }
 
 body {	
-	background: $gradient-reverse;/*$colour-background*/
+	background: $gradient-reverse;
 	font-family: $font-site;
 	opacity:0.97;
 	font-family: $font-web;

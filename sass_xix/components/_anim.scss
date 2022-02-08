@@ -1,8 +1,6 @@
 /**************
 Anim
-20/01/2022
 **************/
-
 // animation: shakeX 0.8s ease-in-out 150ms;
 // animation: smooth 0.8s ease-in-out 150ms;
 // animation: slideX 0.8s ease-in-out 150ms;
@@ -18,9 +16,6 @@ Anim
         transform:rotate(-360deg);
     }
 }
-
-
-
 
 @keyframes openSlide {
     from {
@@ -178,10 +173,12 @@ Anim
 /**/
 .loading{
     position:fixed;
+    // background: $colour-primary-light;
+    // background: $white;
     background: $white;
-    color:#333;
+    color:#333;/*#333*/
 
-    // background:$colour-primary-light;
+    //background:$colour-primary-light;
     // color:$white;
 
     // background: $gradient;
@@ -235,7 +232,7 @@ Anim
     }
     100%{
         opacity:0;
-        z-index : -50;
+        z-index : -10;
     }
     }
 

@@ -1,0 +1,18 @@
+// hack btn cf OC cours
+.btn {
+    position: relative;
+    z-index: 1;
+    &:hover {
+      &::after {
+          opacity: 1;
+      }
+  }
+  &::after {
+      content: "";
+      position: absolute;
+      background: $gradient;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms;
+  }
+  }

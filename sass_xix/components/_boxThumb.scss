@@ -1,19 +1,7 @@
 /**************
 BoxThumbs
-20/01/2022
 **************/
 
-/*****************
-  container
-  @include for-phone-only{
-    
-    background:blueviolet;
-  }
-  @include for-tablet{
-    
-    background:rgb(103, 248, 67);
-  }
-******************/
   .item{
     box-shadow: $shadowbox;
     border-radius: 14px;

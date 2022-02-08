@@ -1,6 +1,5 @@
 /**************
 header
-20/01/2022
 **************/
 header{
  flex :1 100%;
@@ -9,6 +8,7 @@ header{
 .header-nav{
   width: 100%; 
   @include flex-center;
+  height:64px;
   // @include flex-icon02;
   background:$white;
   @include bordershadow02;

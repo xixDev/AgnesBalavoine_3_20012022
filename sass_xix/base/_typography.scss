@@ -1,12 +1,6 @@
 /**************
-Typography rules
-20/01/2022
+Typography 
 **************/
-
-/***************
-TYPO , LINKS
-***************/
-/* liens , a:visited*/
 a:link, a:visited{text-decoration: none; color:$greylight03;} 
 a:hover { text-decoration: none; color:$white;} 
 
@@ -18,28 +12,12 @@ p {
     color: $grey; 
 }
 
-hr { 
-border: none;
-overflow: visible;   
-}
-
-.--vert{ 
-	width:40px;
-	border-bottom: 3px solid $colour-tertiary;
-	margin-top:8px;
-	padding-bottom:8px;
-}
-
 p::first-letter, h4::first-letter, h3::first-letter{
 	text-transform : uppercase;
   }
 
 /***************
 HGROUP
-h1,h2,h3{
-	text-align:left;
-	margin-left:9px;
-}
 ***************/
 .title{ font-family:$font-logo;}
 h1.title{ color:#000; font-size:32px;}
@@ -70,3 +48,25 @@ h4{
 	margin:10px 0 12px 8px;
 	// animation: smooth 800ms ease-in 550ms;	
 }
+
+/*******
+ colors
+ *******/
+.tprimary{color:$colour-primary;}
+.tsecondary{color:$colour-secondary;}
+.ttertiary{color:$colour-tertiary;}
+.vert{ 
+	width:40px;
+	border-bottom: 3px solid $colour-tertiary;
+	margin-top:8px;
+	padding-bottom:8px;
+}
+.pink{
+	background-color:$pink;
+}
+.yellow{
+	background-color:$yellow;
+}
+.white{
+	background-color:$white; 
+	}
