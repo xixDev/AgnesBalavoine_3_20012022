@@ -44,9 +44,6 @@ box-shadow: $shadow02;
 }
 
 /* responsive */
-// @include for-phone;
-// @include for-tablet;
-// @include for-desktop;
 @mixin for-phone {
   @media only screen and (max-width:768px) { 
     @content; 
@@ -62,56 +59,4 @@ box-shadow: $shadow02;
     @content; 
   }
 }
-
-/***************
-icons
-***************/
- 
-i.fa-heart{
-  color: $black;
-  font-size:22px;
-  animation: fontgradient02 0.8s ease-in-out 150ms;
-  &:hover {
-    color: transparent;
-    font-weight: bold;/* :) */
-    position: relative;
-    background-clip: text;
-    -webkit-background-clip: text;
-    background-image: $gradient-reverse;
-    cursor: pointer;
-    &::before {
-    transition: color 300ms ease-in-out;
-    }   
-  }
-    &:active { 
-    background-image: $gradient-reverse; 
-    }
-}
-
-
-i.fa-list-ul, i.fa-mobile-alt, i.fa-store { 
-    font-size:20px;
-    width:24px;
-    margin:8px;
-    color:$grey;
-    &:hover{ 
-        width:24px;
-        margin:8px;
-        color:$colour-secondary;
-        }
-  }
-  
-  i.fa-mobile-alt{
-  font-size:22px;
-  }
-  
-/* icon style*/
-  i.fa-map-marker-alt { 
-  padding:12px; 
-  color:$greydark;
-  width:25px;
-  }
-
-
-
 

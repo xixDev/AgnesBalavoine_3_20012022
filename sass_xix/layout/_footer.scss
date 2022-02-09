@@ -39,6 +39,10 @@ footer{
   
   .itemFooter{
     @include for-desktop{
+      width:90%;
+      h3{
+        margin-top:-7px;
+      }
       @include flex-start;
       flex-wrap: wrap;
     }

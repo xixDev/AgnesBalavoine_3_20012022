@@ -6,6 +6,26 @@ Anim
 // animation: slideX 0.8s ease-in-out 150ms;
 // animation: turnOver 0.8s ease-in-out 150ms;
 
+@keyframes heart-anim {
+    40% {
+        fill: transparent;
+        transform-origin: center;
+        transform: scale(0);
+      }
+    60% {
+      opacity:0.5;
+      transform: scale(0.5);
+    }
+    80% {
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1);
+      opacity:0.9;
+    }
+  }
+
+
 @keyframes turnOver {
     from {
         opacity:0;
@@ -17,29 +37,20 @@ Anim
     }
 }
 
-@keyframes openSlide {
+@keyframes turnOver02 {
     from {
-        opacity:0;
-        transform: translateY(-40px);
+        opacity:1;
+        transform:rotate(-90deg);
+        transform:scale(2);
     }
     to {
-        opacity:1;
-        transform: translateY(0px);
+        opacity:0;
+        transform:rotate(-360deg);
     }
 }
 
-@keyframes openSlide02 {
-    from {
-        opacity:0;
-        transform: translateY(0px);
-    }
-    to {
-        opacity:1;
-        transform: translateY(-20px);
-    }
-}
 
-@keyframes openSlide03{
+@keyframes openSlide{
     from {
         opacity:0.2;
         transform: translateY(-30px);
@@ -50,19 +61,8 @@ Anim
     }
 }
 
+
 @keyframes slideX {
-    from {
-        opacity:0.6;
-        transform: translateX(0px);
-    }
-    to {
-        opacity:1;
-        transform: translateX(-100px);
-    }
-}
-
-
-@keyframes slideX02 {
     from {
         opacity:0.2;
         transform: translateX(100px);
@@ -73,18 +73,30 @@ Anim
     }
 }
 
-
-
-@keyframes smooth {
+@keyframes slideY {
     from {
-        opacity:0.6; 
-       
+        opacity:0.2;
+        transform: translateY(0px);
     }
     to {
         opacity:1;
-        
+        transform: translateY(30px);
     }
 }
+
+
+@keyframes fade { 
+    0%{
+        opacity:1;
+    }
+    50%{
+        opacity:0.5;
+    }
+    100%{
+        opacity:0;
+        z-index : -10;
+    }
+ }
 
 @keyframes shakeX {
     0% {
@@ -112,147 +124,8 @@ Anim
     }
 }
 
-@keyframes shakeY02 {
-    0% {
-        opacity:0;
-        background:#fff;
-        transform: translateY(0px);
-    }
-    20% {
-        transform: translateY(-15px);
-        
-    }
-    40% {
-        opacity:0.3;
-        transform: translateY(15px);
-    }
-    60% {
-        color:#ccc;
-
-        transform: translateY(-15px);
-    }
-    80% {
-        transform: translateY(15px);
-    }
-    100%{
-        opacity:1;
-        transform: translateY(0px);
-    }
-}
-
-@keyframes shakeY {
-    0% {
-        transform: translateY(0px);
-    }
-    20% {
-        transform: translateY(-10px);
-    }
-    40% {
-        transform: translateY(10px);
-    }
-    60% {
-        transform: translateY(-10px);
-    }
-    80% {
-        transform: translateY(10px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-
-}
-
-
- // animation: fontgradient 0.8s ease-in-out 150ms;
- @keyframes fontgradient { 
-    0%{background-position:0% 92%}
-    50%{background-position:100% 9%}
-    100%{background-position:0% 92%}
-    }
-
-/**/
-.loading{
-    position:fixed;
-    // background: $colour-primary-light;
-    // background: $white;
-    background: $white;
-    color:#333;/*#333*/
-
-    //background:$colour-primary-light;
-    // color:$white;
-
-    // background: $gradient;
-    // color:$white;
-
-    height:100%;
-    width: 100%;
-    @include flex-center;
-    z-index: 100;
-    animation: fade 1.8s ease-in 10ms;
-    animation-fill-mode: forwards;
-    animation-delay: 1.2s;
-      .title{
-        opacity:0.8;
-        @include for-desktop{
-            font-size:130px;
-          }
-          @include for-tablet{
-            font-size:100px;
-          }
-          @include for-phone{
-            font-size:50px;
-          }
-        // font-size:160px;
-        
-        //animation: spinner 0.8s ease-in-out 50ms;
-        animation: fade 0.6s linear 90ms;
-        
-        animation-fill-mode: forwards;
-        animation-delay: 1s;
-        text-shadow:$shadow03;
-        
-    }
-    .ooo{
-      // animation: spinner02 0.9s ease-in-out;
-     //animation: spinner04 0.5s ease-out 0ms;
-      animation: spinner04 0.6s ease-in-out 30ms;
-      animation-fill-mode: forwards;
-      animation-delay: 1s;
-      //text-shadow: unset;
-   
-    }
-}
-// animation: spinner 0.8s ease-in-out 150ms;
-@keyframes fade { 
-    0%{
-        opacity:1;
-    }
-    50%{
-        opacity:0.5;
-    }
-    100%{
-        opacity:0;
-        z-index : -10;
-    }
-    }
-
-// animation: spinner 0.8s ease-in-out 150ms;
-@keyframes spinner02 { 
-    0%{
-        opacity:0.4;
-        transform:rotate(-90deg);  
-    }
-    50%{
-        opacity:0.9;
-        transform:rotate(-360deg);
-        
-    }
-    100%{
-        opacity:0;
-        transform:scale(4);
-    }
-    }  
-    @keyframes spinner04 { 
+ 
+ @keyframes spinner { 
         0%{
             opacity:0.4;
             transform-origin: center;
@@ -260,7 +133,6 @@ Anim
         }
         20%{
             opacity:0.8;
-            
             transform:rotate(0deg);  
         }
 
@@ -277,61 +149,7 @@ Anim
         100%{
             opacity:0;
             transform:rotate(240deg);
-            
         }
         }  
-
-        @keyframes spinner05 { 
-            0%{
-                opacity:0.2;
-                transform-origin: center;
-                transform:rotate(0deg);  
-            }
-    
-            30%{
-                opacity:0.8;
-                transform:rotate(90deg); 
-         
-                
-            }
-            70%{
-                opacity:0.4;
-                transform:rotate(180deg);
-                
-                
-            }
-            100%{
-                opacity:0;
-                transform:rotate(240deg);
-                
-            }
-            } 
-
-
-@keyframes spinner { 
-        0%{
-            opacity:0.4;
-            transform:rotate(120deg);    
-        }
-        50%{
-            opacity:0.5;
-            transform:rotate(-360deg);
-        }
-        100%{
-            opacity:0;
-        }
-        } 
-
-
-
-@keyframes turnOver02 {
-        from {
-            opacity:1;
-            transform:rotate(-90deg);
-            transform:scale(2);
-        }
-        to {
-            opacity:0;
-            transform:rotate(-360deg);
-        }
-    }  
+     
+  

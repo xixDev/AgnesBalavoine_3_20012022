@@ -26,7 +26,6 @@ ul {
   @include for-desktop{
     width:800px;
     @include flex-center;
-    // align-items:space-between;
     flex-wrap: nowrap;
   }
 }

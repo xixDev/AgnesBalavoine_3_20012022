@@ -1,7 +1,6 @@
 /**************
 BoxThumbs
 **************/
-
 .item{
     box-shadow: $shadowbox;
     border-radius: 14px;
@@ -34,9 +33,8 @@ figure.item{
     @include for-phone{
       width:336px;
     }
-    // width:336px;
     padding-bottom:4px;
-      img {
+      & img {
       width: 100%;
       height: 174px;
       object-fit: cover;

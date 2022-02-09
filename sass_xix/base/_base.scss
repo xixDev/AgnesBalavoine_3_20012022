@@ -3,10 +3,12 @@ BASE
 **************/
 @charset "utf-8";
 
-* {
+*,*::before,*::after {
 	box-sizing: border-box;
 	@include margpad; 
   }
+  
+
 
 html { 
 	overflow:auto;	

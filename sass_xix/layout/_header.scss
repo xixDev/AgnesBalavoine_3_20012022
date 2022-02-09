@@ -9,21 +9,19 @@ header{
   width: 100%; 
   @include flex-center;
   height:64px;
-  // @include flex-icon02;
   background:$white;
   @include bordershadow02;
-  h1{
+  & h1{
     animation: shakeX 800ms ease-out 250ms;
   }
-  h2{
+  & h2{
     text-align:center;
     font-size:16px;
   }
-  .back{
+  &__back{
     position:relative;
     color:$black;
     font-size: 22px;
-    // align-self:flex-start;
     left:-70px;
     &:hover {
       i.fas{
@@ -34,13 +32,7 @@ header{
   }
 } 
 
-.header-map{
-  opacity:0.6;
-  background:$greylight02;
-  text-align:center;
-}
-
-.info{
+.header-info{
   @include flex-col;
   background: $greylight02;
   padding-bottom:50px;
@@ -49,19 +41,17 @@ header{
     display:block;
     width:100%;
     background: $greylight03;
-    h2{
-      
+    & h2{
       text-align:center;
-
     }
     } 
-    h3{
+    & h3{
       width:80%;
       text-align:center;
       margin-top:30px;
       font-size:22px;
     }
-    p{
+    & p{
       width:80%;
       text-align:center;
       font-size:18px;
@@ -69,8 +59,7 @@ header{
     } 
 }
 
-/* Page Restaurant */
-.header__resto{
+.header-resto{
   height: 260px;
   &__image {
     object-fit: cover;

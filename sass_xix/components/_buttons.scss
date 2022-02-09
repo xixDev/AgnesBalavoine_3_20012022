@@ -9,7 +9,6 @@ Buttons
   font-size: 16px;
   @include shadow;
   cursor: pointer; 
-  animation: smooth 600ms ease-in-out 150ms;
     &__howto {
     width:90%; 
     background: $greylight02; 
@@ -33,7 +32,6 @@ Buttons
         transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;/* 1*/
         i.fas{
           color:$colour-primary;
-          // font-size:11px;
         }
       }
   }
@@ -105,7 +103,7 @@ Buttons
   margin-bottom:14px;
   border-radius: 20px;
   overflow:hidden;
-  animation: openSlide03 500ms ease-in 450ms;
+  animation: openSlide 500ms ease-in 450ms;
   @include shadow02;
   cursor: pointer; 
    &__txt{
@@ -127,15 +125,15 @@ Buttons
         text-overflow:ellipsis;
         font-size: 15px; 
         height:20px;
-        .--euros{
+        .euros{
         padding-right:24px;
         font-weight: bold;
         color:#000;
-       }
-       .--legend{
-      overflow:hidden;
-      text-overflow:ellipsis;
-      }
+        }
+       .legend{
+        overflow:hidden;
+        text-overflow:ellipsis;
+        }
   }
   }
 
@@ -143,15 +141,15 @@ Buttons
     transition: opacity 200ms ease-in 200ms;/* 1*/
     & p{
     height:20px;
-    .--euros{
-      animation: slideX02 650ms ease-in-out 20ms;
+    .euros{
+      animation: slideX 650ms ease-in-out 20ms;
     }
   
     }
     .icon  {
       width: 5%;
       opacity:1;
-      animation: slideX02 650ms ease-in-out 20ms;
+      animation: slideX 650ms ease-in-out 20ms;
       width: 25%;
       i.fas {
         animation: turnOver 800ms ease-out 340ms;
