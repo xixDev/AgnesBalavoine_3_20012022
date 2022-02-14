@@ -17,9 +17,6 @@ BoxThumbs
         @include for-desktop{
           margin:10px 0 0 350px;
         }
-        @include for-tablet{
-          margin:10px 0 0 350px;
-        }
     } 
   }
 
@@ -28,7 +25,7 @@ figure.item{
       width:436px;
     }
     @include for-tablet{
-      width:436px;
+      width:336px;
     }
     @include for-phone{
       width:336px;
@@ -44,7 +41,7 @@ figure.item{
         height: 274px;
       }
       @include for-tablet{
-        height: 274px;
+        height: 174px;
       }
     }
       figcaption  {
@@ -54,6 +51,7 @@ figure.item{
         & h4  {
         line-height: 2.0; 
         margin:0px ; 
+        font-size:18px;
         flex: 1 100%; 
       }  
    }

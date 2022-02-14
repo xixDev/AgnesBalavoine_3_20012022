@@ -1,32 +1,25 @@
 /**************
 MAIN
-20/01/2022
-31/01/22
 **************/
 
 /* utils */
 @import "./utils/variables";
 @import "./utils/mixins";
 @import "./layout/flexbox";
-@import "./utils/functions";
 @import "./layout/navigation";
 
 /* base */
 @import "./base/base";
 @import "./base/typography";
 
-
 /* components */
 @import "./components/boxThumb";
 @import "./components/buttons";
 @import "./components/anim";
-@import "./components/form";
 
 /* layout */
-
 @import "./layout/header";
 @import "./layout/footer";
-
 
 /* pages */
 @import "./pages/home";

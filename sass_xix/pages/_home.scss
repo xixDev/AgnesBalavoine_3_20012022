@@ -37,16 +37,13 @@ Home
   }
 }
 
-
 main {
   overflow:hidden;
   margin: $center-margin;
-  // z-index: inherit;
   @include for-phone{
     width:auto; 
   }
   @include for-tablet{
-    // width:auto;
     max-width: 770px;
   }
   @include for-desktop{
@@ -56,15 +53,17 @@ main {
 
 section header, article header{
   padding:4px;
+  h4{
+    margin-top:40px;
+  }
 } 
 section{
-   padding-bottom:40px;
+   padding-bottom:20px;
   }
 
 .main__home {
-  padding:20px;
   background:$greylight;
-  @include flex-center;/* 0302*/
+  @include flex-center;
   flex-wrap:wrap;
   
 }
