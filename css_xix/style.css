@@ -9,7 +9,6 @@ Variables
 /**/
 /**/
 /**/
-/**/
 /* font */
 /**************
 Mixins
@@ -18,9 +17,6 @@ Mixins
 /* responsive */
 /**************
 Flexbox
-**************/
-/**************
-Functions
 **************/
 /**************
 navigation
@@ -38,7 +34,13 @@ nav {
     margin-right: 20px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 399px) {
+  nav {
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   nav {
     flex-wrap: wrap;
     padding-bottom: 40px;
@@ -104,8 +106,9 @@ p {
   margin: 0px;
   padding: 10px;
   line-height: 1.2;
-  font-size: 13px;
-  color: #777;
+  font-size: 14px;
+  font-weight: normal;
+  color: #000;
 }
 
 p::first-letter, h4::first-letter, h3::first-letter {
@@ -186,7 +189,6 @@ h4 {
 }
 
 /** icons **/
-/**/
 i.fa-heart {
   color: #000;
   font-size: 22px;
@@ -250,6 +252,11 @@ BoxThumbs
     margin: 10px 0 0 350px;
   }
 }
+@media only screen and (max-width: 399px) {
+  .item__new {
+    margin: 10px 0 0 180px;
+  }
+}
 
 figure.item {
   padding-bottom: 4px;
@@ -264,7 +271,12 @@ figure.item {
     width: 336px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  figure.item {
+    width: 336px;
+  }
+}
+@media only screen and (max-width: 399px) {
   figure.item {
     width: 336px;
   }
@@ -322,6 +334,7 @@ Buttons
 }
 .btn__howto a {
   color: #000;
+  text-align: right;
 }
 .btn__howto__circle {
   border-radius: 100%;
@@ -370,15 +383,22 @@ Buttons
   width: 0%;
   opacity: 0.2;
   background: #99E2D0;
+  height: 100%;
 }
 .icon i.fas {
   font-size: 20px;
   display: block;
   height: 80px;
+  /*80px*/
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+@media only screen and (max-width: 399px) {
+  .icon i.fas {
+    height: 110px;
+  }
 }
 
 .btn-menu {
@@ -396,6 +416,11 @@ Buttons
   box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
   cursor: pointer;
 }
+@media only screen and (max-width: 399px) {
+  .btn-menu {
+    max-width: 360px;
+  }
+}
 @media only screen and (min-width: 769px) and (max-width: 990px) {
   .btn-menu {
     width: 345px;
@@ -411,24 +436,46 @@ Buttons
 .btn-menu__txt {
   width: 100%;
   padding: 14px 0 14px 16px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 399px) {
+  .btn-menu__txt {
+    white-space: wrap;
+  }
+}
+@media only screen and (min-width: 400px) and (max-width: 768px) {
+  .btn-menu__txt {
+    white-space: nowrap;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .btn-menu__txt {
+    white-space: nowrap;
+  }
+}
+@media (min-width: 991px) {
+  .btn-menu__txt {
+    white-space: nowrap;
+  }
 }
 .btn-menu__txt h3 {
   font-size: 18px;
   margin-left: -3px;
   line-height: 0.5;
 }
+@media only screen and (max-width: 399px) {
+  .btn-menu__txt h3 {
+    font-size: 16px;
+    line-height: 1;
+  }
+}
 .btn-menu__txt p {
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
-  overflow: hidden;
-  text-overflow: ellipsis;
   font-size: 15px;
-  height: 20px;
 }
 .btn-menu__txt p .euros {
   padding-right: 24px;
@@ -438,6 +485,11 @@ Buttons
 .btn-menu__txt p .legend {
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media only screen and (max-width: 399px) {
+  .btn-menu__txt p .legend {
+    font-size: 15px;
+  }
 }
 .btn-menu:hover {
   transition: opacity 200ms ease-in 200ms;
@@ -620,6 +672,11 @@ header {
   font-size: 22px;
   left: -70px;
 }
+@media only screen and (max-width: 399px) {
+  .header-nav__back {
+    left: -20px;
+  }
+}
 .header-nav__back:hover i.fas {
   animation: shakeX 0.8s ease-in-out 150ms;
   color: #9356DC;
@@ -768,7 +825,7 @@ Home
     font-size: 100px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   .loading .title {
     font-size: 50px;
   }
@@ -783,7 +840,7 @@ main {
   overflow: hidden;
   margin: 0px auto;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 400px) and (max-width: 768px) {
   main {
     width: auto;
   }
@@ -828,6 +885,11 @@ Page
   background: #f6f6f6;
   margin-top: -45px;
   z-index: 20;
+}
+@media only screen and (max-width: 399px) {
+  .main__resto {
+    padding: 4px;
+  }
 }
 .main__resto header {
   width: 95%;
