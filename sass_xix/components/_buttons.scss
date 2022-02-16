@@ -113,7 +113,7 @@ Buttons
     overflow:hidden;
     text-overflow:ellipsis;
     @include for-smphone{
-      white-space: wrap;
+      white-space: normal;
     }
     @include for-phone{
       white-space: nowrap;
