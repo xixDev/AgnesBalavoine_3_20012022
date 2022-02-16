@@ -17,6 +17,9 @@ BoxThumbs
         @include for-desktop{
           margin:10px 0 0 350px;
         }
+        @include for-smphone{
+          margin:10px 0 0 180px;
+        }
     } 
   }
 
@@ -28,6 +31,9 @@ figure.item{
       width:336px;
     }
     @include for-phone{
+      width:336px;
+    }
+    @include for-smphone{
       width:336px;
     }
     padding-bottom:4px;

@@ -68,12 +68,17 @@ Buttons
   width: 0%;
   opacity:0.2;
   background:$colour-tertiary;
+  height:100%;
   i.fas {
     font-size: 20px;
     display:block;
-    height: 80px;
+    height: 80px;/*80px*/
     color:$white;
     @include flex-center;
+    @include for-smphone{
+      height:110px;
+
+    }
   }
   
 } 
@@ -89,6 +94,9 @@ Buttons
   animation: openSlide 500ms ease-in 450ms;
   @include shadow02;
   cursor: pointer; 
+  @include for-smphone{
+    max-width: 360px; 
+  }
   @include for-tablet{
     width: 345px;
     margin-right:15px;
@@ -101,22 +109,37 @@ Buttons
    &__txt{
     width:100%; 
     padding:14px 0 14px 16px;
-    white-space: nowrap;
+    
     overflow:hidden;
     text-overflow:ellipsis;
+    @include for-smphone{
+      white-space: wrap;
+    }
+    @include for-phone{
+      white-space: nowrap;
+    }
+    @include for-tablet{
+      white-space: nowrap;
+    }
+    @include for-desktop{
+      white-space: nowrap;
+    }
       & h3{
         font-size:18px;
         margin-left:-3px;
         line-height:0.5; 
+        @include for-smphone{
+          font-size:16px;
+          line-height:1.0;
+
+        }
       }
       & p{ 
         @include margpad;
         display:flex;
         justify-content:space-between;
-        overflow:hidden;
-        text-overflow:ellipsis;
         font-size: 15px; 
-        height:20px;
+        
         .euros{
         padding-right:24px;
         font-weight: bold;
@@ -125,11 +148,16 @@ Buttons
        .legend{
         overflow:hidden;
         text-overflow:ellipsis;
+        @include for-smphone{
+          font-size:15px;
+
+        }
         }
   }
   }
 
   &:hover{
+    
     transition: opacity 200ms ease-in 200ms;/* 1*/
     & p{
     height:20px;

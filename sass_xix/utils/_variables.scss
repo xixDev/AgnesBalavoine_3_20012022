@@ -35,7 +35,7 @@ $shadow:6px 6px 12px #c9c9c9, -6px -6px 12px #fff;
 $shadow02:6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
 $shadow03:3px 3px 6px #dad8d8, -3px -3px 6px #c4bdbd;
 
-
+$shadowbox: 0 3px 3px rgba(0, 0, 0, 0.1);
 /* font */
 // $font-site(font_name,font_style) :font-family: 'Shrikhand', cursive;
 // $font-title :font-family : 'Shrikhand', cursive;
@@ -47,11 +47,12 @@ $font-web : 'Arial','Verdana',sans-serif;
 
 
 // Responsive map
-$breakpoints: (
-  'phone': 480px,
-  'tablet': 768px,
-  'desktop': 992px,
-);
+// $breakpoints: (
+//   'smphone': 400px,
+//   'phone': 480px,
+//   'tablet': 768px,
+//   'desktop': 992px,
+// );
 
 
 

@@ -8,6 +8,10 @@ Page
   background:$greylight02;
   margin-top:-45px;
   z-index:20;
+  @include for-smphone{
+    padding:4px;
+    
+  }
   header {
     width:95%; 
     padding-top:20px;
@@ -40,7 +44,9 @@ Page
     font-size:17px;
   }
   section {
-    @include flex-center;  
+    @include flex-center;
+   
+     
   }
   article{
     @include for-desktop{
@@ -54,6 +60,7 @@ Page
       @include flex-start02; 
      
     }
+    
   }
 }
 
