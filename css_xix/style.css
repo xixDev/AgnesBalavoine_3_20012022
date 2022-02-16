@@ -33,13 +33,13 @@ nav {
     margin-right: 20px;
   }
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   nav {
     flex-wrap: wrap;
     padding-bottom: 20px;
   }
 }
-@media only screen and (min-width: 400px) and (max-width: 768px) {
+@media only screen and (min-width: 375px) and (max-width: 768px) {
   nav {
     flex-wrap: wrap;
     padding-bottom: 40px;
@@ -251,7 +251,7 @@ BoxThumbs
     margin: 10px 0 0 350px;
   }
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   .item__new {
     margin: 10px 0 0 180px;
   }
@@ -270,12 +270,12 @@ figure.item {
     width: 336px;
   }
 }
-@media only screen and (min-width: 400px) and (max-width: 768px) {
+@media only screen and (min-width: 375px) and (max-width: 768px) {
   figure.item {
     width: 336px;
   }
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   figure.item {
     width: 336px;
   }
@@ -394,7 +394,7 @@ Buttons
   align-items: center;
   justify-content: center;
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   .icon i.fas {
     height: 110px;
   }
@@ -415,7 +415,7 @@ Buttons
   box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
   cursor: pointer;
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   .btn-menu {
     max-width: 360px;
   }
@@ -438,12 +438,12 @@ Buttons
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   .btn-menu__txt {
     white-space: normal;
   }
 }
-@media only screen and (min-width: 400px) and (max-width: 768px) {
+@media only screen and (min-width: 375px) and (max-width: 768px) {
   .btn-menu__txt {
     white-space: nowrap;
   }
@@ -463,7 +463,7 @@ Buttons
   margin-left: -3px;
   line-height: 0.5;
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   .btn-menu__txt h3 {
     font-size: 16px;
     line-height: 1;
@@ -485,7 +485,7 @@ Buttons
   overflow: hidden;
   text-overflow: ellipsis;
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   .btn-menu__txt p .legend {
     font-size: 15px;
   }
@@ -671,7 +671,7 @@ header {
   font-size: 22px;
   left: -70px;
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   .header-nav__back {
     left: -20px;
   }
@@ -824,7 +824,7 @@ Home
     font-size: 100px;
   }
 }
-@media only screen and (min-width: 400px) and (max-width: 768px) {
+@media only screen and (min-width: 375px) and (max-width: 768px) {
   .loading .title {
     font-size: 50px;
   }
@@ -839,7 +839,7 @@ main {
   overflow: hidden;
   margin: 0px auto;
 }
-@media only screen and (min-width: 400px) and (max-width: 768px) {
+@media only screen and (min-width: 375px) and (max-width: 768px) {
   main {
     width: auto;
   }
@@ -885,7 +885,7 @@ Page
   margin-top: -45px;
   z-index: 20;
 }
-@media only screen and (max-width: 399px) {
+@media only screen and (max-width: 374px) {
   .main__resto {
     padding: 4px;
   }
