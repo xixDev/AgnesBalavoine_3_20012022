@@ -38,7 +38,7 @@ Page
         color:$white; 
       } 
   }
-  h4{
+  h3{
     text-transform:uppercase;
     font-weight: normal;
     font-size:17px;
@@ -52,7 +52,7 @@ Page
     @include for-desktop{
       @include flex-start02; 
      margin:20px; 
-     h4{
+     h3{
       font-size:19px;
     }
     }

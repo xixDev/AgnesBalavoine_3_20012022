@@ -2,11 +2,26 @@
 navigation
 **************/
 nav {
+  background:$white;
+  ul{
+    h4 {
+      line-height:2.3;
+      margin:3px 30px 0 18px;
+      
+      } 
   @include flex-start;
-  @include for-desktop{
-    @include margpad;
-    flex-wrap: nowrap;
+  @include for-desktop{ 
+    // @include margpad;
+    flex-wrap: wrap;
     margin-right:20px;
+    padding:20px;
+    li:nth-child(1)	 {
+      flex:1 100%;
+    }
+    li:nth-child(2),li:nth-child(3),li:nth-child(4) {
+      flex:1;
+    }
+    
   }
   @include for-smphone{
     flex-wrap: wrap;
@@ -17,19 +32,21 @@ nav {
     padding-bottom:40px;
   }
   @include for-tablet{
+    
     flex-wrap: wrap;
     padding-bottom:40px;
+    li:nth-child(1)	 {
+      flex:1 100%;
+    }
+    li:nth-child(2),li:nth-child(3),li:nth-child(4) {
+      flex:1;
+    }
   }
-  
+}
 }
 
 
 ul {
   list-style: none; 
   padding:20px;
-  @include for-desktop{
-    width:800px;
-    @include flex-center;
-    flex-wrap: nowrap;
-  }
 }

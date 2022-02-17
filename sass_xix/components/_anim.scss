@@ -59,6 +59,30 @@ Anim
         transform: translateY(0px);
     }
 }
+@keyframes openSlide02{
+0%{
+    opacity:0;
+    transform: translateY(20px);
+}
+50%{
+    opacity:0.2;
+}
+100%{
+    opacity:1;
+    
+}
+}
+
+// @keyframes openSlide02{
+//     from {
+//         opacity:1;
+//         transform: translateY(0px);
+//     }
+//     to {
+//         opacity:0;
+//         transform: translateY(-20px);
+//     }
+// }
 
 
 @keyframes slideX {

@@ -21,49 +21,58 @@ Flexbox
 navigation
 **************/
 nav {
+  background: #fff;
+}
+nav ul {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
+nav ul h4 {
+  line-height: 2.3;
+  margin: 3px 30px 0 18px;
+}
 @media (min-width: 991px) {
-  nav {
-    margin: 0;
-    padding: 0;
-    flex-wrap: nowrap;
+  nav ul {
+    flex-wrap: wrap;
     margin-right: 20px;
+    padding: 20px;
+  }
+  nav ul li:nth-child(1) {
+    flex: 1 100%;
+  }
+  nav ul li:nth-child(2), nav ul li:nth-child(3), nav ul li:nth-child(4) {
+    flex: 1;
   }
 }
 @media only screen and (max-width: 374px) {
-  nav {
+  nav ul {
     flex-wrap: wrap;
     padding-bottom: 20px;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 768px) {
-  nav {
+  nav ul {
     flex-wrap: wrap;
     padding-bottom: 40px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 990px) {
-  nav {
+  nav ul {
     flex-wrap: wrap;
     padding-bottom: 40px;
+  }
+  nav ul li:nth-child(1) {
+    flex: 1 100%;
+  }
+  nav ul li:nth-child(2), nav ul li:nth-child(3), nav ul li:nth-child(4) {
+    flex: 1;
   }
 }
 
 ul {
   list-style: none;
   padding: 20px;
-}
-@media (min-width: 991px) {
-  ul {
-    width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-  }
 }
 
 /* base */
@@ -331,6 +340,15 @@ Buttons
   border-radius: 25px;
   box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
 }
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .btn__howto {
+    text-align: left;
+    margin: 5px 0 5px 15px;
+    white-space: nowrap;
+    font-size: 12px;
+    width: 80%;
+  }
+}
 .btn__howto a {
   color: #000;
   text-align: right;
@@ -400,6 +418,22 @@ Buttons
   }
 }
 
+.btn-menu:nth-child(2) {
+  animation: openSlide02 1300ms ease-in-out 0ms;
+}
+
+.btn-menu:nth-child(3) {
+  animation: openSlide02 1300ms ease-in-out 100ms;
+}
+
+.btn-menu:nth-child(4) {
+  animation: openSlide02 1300ms ease-in-out 200ms;
+}
+
+.btn-menu:nth-child(5) {
+  animation: openSlide02 1300ms ease-in-out 300ms;
+}
+
 .btn-menu {
   font-size: 15px;
   background: #fff;
@@ -411,7 +445,6 @@ Buttons
   margin-bottom: 14px;
   border-radius: 20px;
   overflow: hidden;
-  animation: openSlide 500ms ease-in 450ms;
   box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
   cursor: pointer;
 }
@@ -458,13 +491,13 @@ Buttons
     white-space: nowrap;
   }
 }
-.btn-menu__txt h3 {
+.btn-menu__txt h4 {
   font-size: 18px;
   margin-left: -3px;
   line-height: 0.5;
 }
 @media only screen and (max-width: 374px) {
-  .btn-menu__txt h3 {
+  .btn-menu__txt h4 {
     font-size: 16px;
     line-height: 1;
   }
@@ -561,6 +594,18 @@ Anim
     transform: translateY(0px);
   }
 }
+@keyframes openSlide02 {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes slideX {
   from {
     opacity: 0.2;
@@ -655,11 +700,8 @@ header {
   justify-content: center;
   height: 64px;
   background: #fff;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 5px 7px 16px 2px rgba(0, 0, 0, 0.4);
-}
-.header-nav h1 {
-  animation: shakeX 800ms ease-out 250ms;
+  position: relative;
+  box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.4);
 }
 .header-nav h2 {
   text-align: center;
@@ -918,7 +960,7 @@ Page
 .main__resto header .love:hover {
   color: #fff;
 }
-.main__resto h4 {
+.main__resto h3 {
   text-transform: uppercase;
   font-weight: normal;
   font-size: 17px;
@@ -935,7 +977,7 @@ Page
     flex-wrap: wrap;
     margin: 20px;
   }
-  .main__resto article h4 {
+  .main__resto article h3 {
     font-size: 19px;
   }
 }
