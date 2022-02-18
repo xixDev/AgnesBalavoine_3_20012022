@@ -48,13 +48,14 @@ nav ul h4 {
 @media only screen and (max-width: 374px) {
   nav ul {
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    padding: 20px 0 20px 0;
   }
 }
 @media only screen and (min-width: 375px) and (max-width: 768px) {
   nav ul {
     flex-wrap: wrap;
-    padding-bottom: 40px;
+    padding: 20px 10px 40px 0px;
+    max-width: 550px;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 990px) {
@@ -340,6 +341,11 @@ Buttons
   border-radius: 25px;
   box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
 }
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .btn__howto {
+    min-width: 325px;
+  }
+}
 @media only screen and (min-width: 769px) and (max-width: 990px) {
   .btn__howto {
     text-align: left;
@@ -363,7 +369,7 @@ Buttons
 }
 .btn__howto:hover {
   background-color: #f5edff;
-  transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;
+  transition: opacity 200ms ease-in-out 200ms, background-color 300ms ease-in-out 100ms;
   /* 1*/
 }
 .btn__howto:hover i.fas {
@@ -390,7 +396,7 @@ Buttons
   opacity: 0.8;
   border-color: #fff;
   box-shadow: 0 2px 6px #FF79DA;
-  transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 300ms;
+  transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 200ms;
   /* 1*/
 }
 
@@ -398,9 +404,10 @@ Buttons
 .icon {
   right: 0px;
   width: 0%;
-  opacity: 0.2;
+  opacity: 0;
   background: #99E2D0;
   height: 100%;
+  position: relative;
 }
 .icon i.fas {
   font-size: 20px;
@@ -436,6 +443,7 @@ Buttons
 
 .btn-menu {
   font-size: 15px;
+  height: 72px;
   background: #fff;
   display: flex;
   align-items: flex-start;
@@ -448,9 +456,15 @@ Buttons
   box-shadow: 6px 6px 12px #dad8d8, -6px -6px 12px #F2F2F2;
   cursor: pointer;
 }
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .btn-menu {
+    width: 350px;
+  }
+}
 @media only screen and (max-width: 374px) {
   .btn-menu {
     max-width: 360px;
+    height: auto;
   }
 }
 @media only screen and (min-width: 769px) and (max-width: 990px) {
@@ -469,7 +483,6 @@ Buttons
   width: 100%;
   padding: 14px 0 14px 16px;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 @media only screen and (max-width: 374px) {
   .btn-menu__txt {
@@ -493,16 +506,17 @@ Buttons
 }
 .btn-menu__txt h4 {
   font-size: 18px;
-  margin-left: -3px;
-  line-height: 0.5;
+  margin: 0px 0 6px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media only screen and (max-width: 374px) {
   .btn-menu__txt h4 {
     font-size: 16px;
-    line-height: 1;
   }
 }
 .btn-menu__txt p {
+  width: 100%;
   margin: 0;
   padding: 0;
   display: flex;
@@ -511,6 +525,7 @@ Buttons
 }
 .btn-menu__txt p .euros {
   padding-right: 24px;
+  padding-left: 10px;
   font-weight: bold;
   color: #000;
 }
@@ -523,24 +538,16 @@ Buttons
     font-size: 15px;
   }
 }
-.btn-menu:hover {
-  transition: opacity 200ms ease-in 200ms;
-  /* 1*/
-}
-.btn-menu:hover p {
-  height: 20px;
-}
-.btn-menu:hover p .euros {
-  animation: slideX 650ms ease-in-out 20ms;
+.btn-menu:hover p .legend {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .btn-menu:hover .icon {
-  width: 5%;
-  opacity: 1;
-  animation: slideX 650ms ease-in-out 20ms;
-  width: 25%;
+  animation: slideX-icon 750ms ease-in-out;
+  animation-fill-mode: forwards;
 }
 .btn-menu:hover .icon i.fas {
-  animation: turnOver 800ms ease-out 340ms;
+  animation: turnOver 800ms ease-in-out 340ms;
 }
 
 /**************
@@ -552,8 +559,8 @@ Anim
     transform: scale(0);
   }
   60% {
-    opacity: 0.5;
-    transform: scale(0.5);
+    opacity: 0.4;
+    transform: scale(0.6);
   }
   80% {
     opacity: 1;
@@ -584,16 +591,6 @@ Anim
     transform: rotate(-360deg);
   }
 }
-@keyframes openSlide {
-  from {
-    opacity: 0.2;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0px);
-  }
-}
 @keyframes openSlide02 {
   0% {
     opacity: 0;
@@ -608,12 +605,21 @@ Anim
 }
 @keyframes slideX {
   from {
-    opacity: 0.2;
+    transform: translateX(140px);
+  }
+  to {
+    transform: translateX(90px);
+  }
+}
+@keyframes slideX-icon {
+  from {
+    opacity: 0;
     transform: translateX(100px);
   }
   to {
     opacity: 1;
     transform: translateX(0px);
+    width: 27%;
   }
 }
 @keyframes slideY {
@@ -624,6 +630,17 @@ Anim
   to {
     opacity: 1;
     transform: translateY(30px);
+  }
+}
+@keyframes smooth {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
   }
 }
 @keyframes fade {
@@ -700,8 +717,9 @@ header {
   justify-content: center;
   height: 64px;
   background: #fff;
+  border-bottom: 1px solid #ddc;
   position: relative;
-  box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 5px 11px -3px rgba(0, 0, 0, 0.6);
 }
 .header-nav h2 {
   text-align: center;
@@ -932,13 +950,17 @@ Page
     padding: 4px;
   }
 }
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .main__resto {
+    padding: 12px;
+  }
+}
 .main__resto header {
   width: 95%;
   padding-top: 20px;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  animation: smooth 600ms ease-in-out 150ms;
 }
 .main__resto header h2 {
   font-size: 26px;
@@ -969,6 +991,9 @@ Page
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.main__resto article {
+  animation: smooth 1.2s ease-out;
 }
 @media (min-width: 991px) {
   .main__resto article {

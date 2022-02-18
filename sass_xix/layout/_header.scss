@@ -10,7 +10,7 @@ header{
   @include flex-center;
   height:64px;
   background:$white;
-  @include bordershadow--inset;
+  @include border-shadow;
   // & h1{
   //   animation: shakeX 800ms ease-out 250ms;
   // }

@@ -12,11 +12,14 @@ Page
     padding:4px;
 
   }
+  @include for-phone{
+    padding:12px
+  }
   header {
     width:95%; 
     padding-top:20px;
     @include flex-icon;
-    animation: smooth 600ms ease-in-out 150ms;
+    
    
     h2{
       font-size:26px;
@@ -49,6 +52,7 @@ Page
      
   }
   article{
+    animation: smooth 1.2s ease-out;
     @include for-desktop{
       @include flex-start02; 
      margin:20px; 
@@ -58,8 +62,11 @@ Page
     }
     @include for-tablet{
       @include flex-start02; 
-     
     }
+    // @include for-phone{
+    //   @include flex-center;
+    //   flex-wrap:wrap;
+    // }
     
   }
 }

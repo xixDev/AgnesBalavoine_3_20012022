@@ -88,7 +88,11 @@ i.fa-heart{
       -webkit-background-clip: text;
       background-image: $gradient-reverse;
       animation: heart-anim 2s ease-out 120ms;  
+      // animation: heart-anim 2s ease-in 420ms;  
     }
+    //&:active
+    
+
   }
 
   i.fa-list-ul, i.fa-mobile-alt, i.fa-store { 

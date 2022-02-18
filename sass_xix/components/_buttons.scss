@@ -16,6 +16,9 @@ Buttons
     padding:18px;
     border-radius: 25px;
     @include shadow02;
+    @include for-phone{
+      min-width: 325px; 
+    }
     @include for-tablet{
       text-align:left;
       margin:5px 0 5px 15px; 
@@ -37,7 +40,7 @@ Buttons
      }
       &:hover {
         background-color: $colour-primary-light;
-        transition: opacity 200ms ease-in 200ms, background 200ms ease-out 300ms;/* 1*/
+        transition: opacity 200ms ease-in-out 200ms, background-color 300ms ease-in-out 100ms;/* 1*/
         i.fas{
           color:$colour-primary;
         }
@@ -62,7 +65,7 @@ Buttons
         opacity:0.8;
         border-color: $white; 
         box-shadow: 0 2px 6px $colour-secondary; 
-        transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 300ms;/* 1*/
+        transition: opacity 200ms ease-in 200ms, background-color 200ms ease-out 200ms;/* 1*/
       }
       
   }
@@ -73,9 +76,12 @@ Buttons
 .icon{
   right: 0px;
   width: 0%;
-  opacity:0.2;
+  opacity:0;
   background:$colour-tertiary;
   height:100%;
+ position:relative;
+
+
   i.fas {
     font-size: 20px;
     display:block;
@@ -83,7 +89,7 @@ Buttons
     color:$white;
     @include flex-center;
     @include for-smphone{
-      height:110px;
+    height:110px;
 
     }
   }
@@ -117,6 +123,7 @@ Buttons
 
 .btn-menu {
   font-size:15px;
+  height:72px;
   background: $white;
   @include flex-start;
   @include margpad;
@@ -125,10 +132,13 @@ Buttons
   overflow:hidden;
   @include shadow02;
   cursor: pointer; 
+  @include for-phone{
+    width: 350px; 
+  }
   @include for-smphone{
     max-width: 360px; 
+    height:auto;
   }
-
   @include for-tablet{
     width: 345px;
     margin-right:15px;
@@ -141,9 +151,8 @@ Buttons
    &__txt{
     width:100%; 
     padding:14px 0 14px 16px;
-    
     overflow:hidden;
-    text-overflow:ellipsis;
+    
     @include for-smphone{
       white-space: normal;
     }
@@ -158,22 +167,24 @@ Buttons
     }
       & h4{
         font-size:18px;
-        margin-left:-3px;
-        line-height:0.5; 
+        margin:0px 0 6px 0px;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      
         @include for-smphone{
           font-size:16px;
-          line-height:1.0;
-
+          
         }
       }
       & p{ 
+        width:100%; 
         @include margpad;
         display:flex;
         justify-content:space-between;
         font-size: 15px; 
-        
         .euros{
         padding-right:24px;
+        padding-left:10px;
         font-weight: bold;
         color:#000;
         }
@@ -189,27 +200,22 @@ Buttons
   }
 
   &:hover{
-    transition: opacity 200ms ease-in 200ms;/* 1*/
     & p{
-    height:20px;
-    .euros{
-      animation: slideX 650ms ease-in-out 20ms;
-    }
-  
+    // min-height:20px;
+    .legend{
+      overflow:hidden;
+      text-overflow:ellipsis;
+      }
     }
     .icon  {
-      width: 5%;
-      opacity:1;
-      animation: slideX 650ms ease-in-out 20ms;
-      width: 25%;
+      animation: slideX-icon 750ms ease-in-out;
+      animation-fill-mode: forwards;
       i.fas {
-        animation: turnOver 800ms ease-out 340ms;
-      }
-      
-    }
+        animation: turnOver 800ms ease-in-out 340ms;
 
+      }
+    }
    
-  
   }
 
 }
